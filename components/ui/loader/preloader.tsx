@@ -1,3 +1,5 @@
+import "./preloader.module.css";
+
 const Preloader = () => {
   return (
     <div id="preloader">

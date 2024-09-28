@@ -6,8 +6,10 @@ const About = () => {
 
         <div className="row">
           <div className="column tab-full">
-            <div className="section-intro" data-num="01">
-              <h3 className="subhead">About Me</h3>
+            <div className="section-intro">
+              <h3 className="subhead" data-num="01">
+                About Me
+              </h3>
               <h1 className="display-1 text-8xl">
                 I'm the kind of person who isn't afraid of challenges.
               </h1>
