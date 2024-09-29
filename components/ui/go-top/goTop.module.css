@@ -1,0 +1,56 @@
+/* -------------------------------------------------------------------
+ * ## go top
+ * ------------------------------------------------------------------- */
+.ssGoTop {
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  position: fixed;
+  bottom: 3.2rem;
+  right: 2.5rem;
+}
+
+.ssGoTop a {
+  text-decoration: none;
+  border: 0 none;
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  line-height: 6.4rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: black;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.ssGoTop a:hover,
+.ssGoTop a:focus {
+  background-color: #2280de;
+}
+
+.ssGoTop svg {
+  height: 1.2rem;
+  width: 1.2rem;
+  position: absolute;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  left: 50%;
+  top: 50%;
+}
+
+.ssGoTop svg path {
+  fill: #ffffff;
+}
+
+.ssGoTop.linkIsVisible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}

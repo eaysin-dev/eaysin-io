@@ -1,86 +1,80 @@
 import createArray from "@/utils/create-array";
-import Image from "next/image";
-import BadgesItem from "./ui/badge-item";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import { Typography } from "./ui/typography";
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="s-portfolio">
-      <div className="row s-portfolio__top">
-        <div className="column large-6 w-900-stack">
-          <div className="section-title" data-num="03">
-            <h3 className="h6">Recent Works</h3>
-          </div>
+    <section id="portfolio" className="section-container mt-48 mb-10">
+      <div className="grid grid-cols-2">
+        <div className="section-intro mt-12" data-num="03">
+          <Typography variant="subhead">Recent Works</Typography>
         </div>
-        <div className="column large-6 w-900-stack">
-          <h1 className="display-1">
-            Here are some of our projects we done lately. Feel free to check
-            them out.
-          </h1>
-        </div>
+        <Typography variant="h1">
+          Here are some of our projects we done lately. Feel free to check them
+          out.
+        </Typography>
       </div>
-
-      <div className="row s-portfolio__list block-large-1-2 block-tab-full">
+      <div className="flex items-center justify-center mt-12 md:mt-0 mb-2 md:mb-5">
+        <Tabs defaultValue="account" className="w-[400px]">
+          <TabsList className="grid w-full grid-cols-4">
+            <TabsTrigger value="all">All</TabsTrigger>
+            <TabsTrigger value="library">Library</TabsTrigger>
+            <TabsTrigger value="react-js">React Js</TabsTrigger>
+            <TabsTrigger value="next-js">Next Js</TabsTrigger>
+          </TabsList>
+          <TabsContent value="account"></TabsContent>
+          <TabsContent value="password"></TabsContent>
+        </Tabs>
+      </div>
+      <div className="grid lg:grid-cols-2 gap-5 pt-10">
         {createArray(5).map((item, index) => (
-          <article className="py-10 sm:py-12 grid grid-cols-1 md:grid-cols-4 gap-12">
-            <div>
-              <Image
-                className="object-cover object-center grayscale h-full"
-                src={"/images/portfolio/woodcraft.jpg"}
-                alt="Unearthing History"
-                height={80}
-                width={1061}
-              />
-            </div>
-            <div className="flex flex-col items-start md:col-span-3 justify-between">
-              <div>
-                <div className="flex items-center gap-1">
-                  <h1 className="font-mono text-2xl font-bold leading-7 text-zinc-500">
-                    Blackrock It Solutions_
-                  </h1>
+          <Card className="border border-muted p-1">
+            <CardHeader>
+              <CardTitle>Lorem ipsum dolor sit amet.</CardTitle>
+              <CardDescription>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius,
+                ullam.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground">
+                Explore more about this project.
+              </p>
 
-                  <time
-                    dateTime="2022-02-24T00:00:00.000Z"
-                    className="font-mono text-2xl leading-7 text-zinc-500"
-                  >
-                    February 24, 2022
-                  </time>
-                </div>
-
-                <p className="mt-3 text-xl lg:text-6xl leading-7 text-[#2280de] font-serif uppercase">
-                  Unearthing History{" "}
-                </p>
-                <h2 className="mt-3 text-lg font-light text-zinc-500 lg:text-2xl">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Explicabo molestias vel doloribus saepe odit placeat ullam
-                  sunt quas hic incidunt inventore porro dolor, iste culpa
-                  delectus debitis illum. Minus, possimus.
-                </h2>
-
-                <div className="flex flex-wrap gap-2 pt-5">
-                  <BadgesItem roundedFull>JavaScript</BadgesItem>
-                  <BadgesItem roundedFull>TypeScript</BadgesItem>
-                  <BadgesItem roundedFull>React Js</BadgesItem>
-                  <BadgesItem roundedFull>Redux Js</BadgesItem>
-                </div>
+              <div className="flex flex-wrap gap-2 pt-3">
+                <Badge>JavaScript</Badge>
+                <Badge>TypeScript</Badge>
+                <Badge>React Js</Badge>
+                <Badge>Redux Js</Badge>
               </div>
-
-              <div>
-                <BadgesItem
-                  className="text-2xl font-bold hover:bg-[#2280de] py-3 px-5 hover:text-white transition-all cursor-pointer"
-                  roundedNone
-                >
-                  Explore Project
-                </BadgesItem>
-              </div>
-            </div>
-          </article>
+            </CardContent>
+            <CardFooter className="flex justify-between space-x-2">
+              <Button asChild variant="outline">
+                <a href={"#"} target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
+              </Button>
+              <Button asChild>
+                <a href={"#"} target="_blank" rel="noopener noreferrer">
+                  Live Demo
+                </a>
+              </Button>
+            </CardFooter>
+          </Card>
         ))}
-
-        <div className="flex items-center justify-center w-full mt-20">
-          <button className="btn btn--small hover:bg-[#2280de]">
-            See More
-          </button>
-        </div>
+      </div>{" "}
+      <div className="flex items-center justify-center w-full mt-16">
+        <Button>See More</Button>
       </div>
     </section>
   );

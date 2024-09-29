@@ -1,6 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
+import { Button } from "./ui/button";
+import GoTop from "./ui/go-top/goTop";
+import { Typography } from "./ui/typography";
 
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,96 +34,77 @@ const Footer = () => {
   }, []);
 
   return (
-    <>
-      <section className="s-contact bg-black">
-        <div className="row narrower s-contact__top h-text-center">
+    <Fragment>
+      <section className="section-container pb-10 pt-20">
+        <div className="mb-16">
           <div className="column">
-            <h3 className="h6">Get In Touch</h3>
-            <h1 className="display-1">
+            <Typography
+              variant="h3"
+              className="uppercase tracking-wider text-center"
+            >
+              Get In Touch
+            </Typography>
+            <Typography variant="h1" className="mt-16">
               Have an idea or an epic project in mind? Talk to us. Let us work
               together and make something great. Shoot us a message at
-            </h1>
+            </Typography>
           </div>
         </div>
 
-        <div className="row h-text-center">
-          <div className="column">
-            <p className="s-contact__email">
-              <a href="mailto:#0" className="break-words">
-                eaysin.arafat.j@gmail.com
-              </a>
-            </p>
-          </div>
+        <div className="column flex items-center justify-center break-all">
+          <Typography
+            variant="inlineCode"
+            className="text-[2rem] lg:text-[4rem] whitespace-pre-wrap text-center"
+          >
+            eaysin.arafat.j@gmail.com
+          </Typography>
         </div>
       </section>
 
-      <footer className="s-footer bg-black">
-        <div className="row row-y-top">
-          <div className="column large-8 medium-12">
-            <div className="row">
-              <div className="column large-7 tab-12 s-footer__block">
-                <h4 className="h6">Where to Find Us</h4>
+      <footer className="py-10 md:py-30 section-container">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="column md:col-span-1">
+            <Typography variant="h4" className="uppercase tracking-wider pb-4">
+              Where to Find Me
+            </Typography>
 
-                <p>
-                  1600 Amphitheatre Parkway <br />
-                  Mountain View, California <br />
-                  94043 US <br />
-                  <a href="tel:197-543-2345">+197 543 2345</a>
-                </p>
-              </div>
-
-              <div className="column large-5 tab-12 s-footer__block">
-                <h4 className="h6">Follow Us</h4>
-
-                <ul className="s-footer__list">
-                  <li>
-                    <a href="#0">Facebook</a>
-                  </li>
-                  <li>
-                    <a href="#0">Twitter</a>
-                  </li>
-                  <li>
-                    <a href="#0">Instagram</a>
-                  </li>
-                  <li>
-                    <a href="#0">Dribbble</a>
-                  </li>
-                </ul>
-              </div>
+            <div>
+              <Typography variant="large">1600 Amphitheatre Parkway</Typography>
+              <Typography variant="large">Mountain View, California</Typography>
+              <Typography variant="large">94043 US</Typography>
+              <Typography variant="large">+197 543 2345</Typography>
             </div>
           </div>
 
-          <div className="column large-4 medium-12 s-footer__block--end">
-            <a href="mailto:#0" className="btn h-full-width ">
-              Let's Talk
-            </a>
+          <div className="column md:col-span-1">
+            <Typography variant="h4" className="uppercase tracking-wider pb-4">
+              Follow Us
+            </Typography>
+
+            <ul className="space-y-2">
+              <li>
+                <Typography variant="large">Facebook</Typography>
+              </li>
+              <li>
+                <Typography variant="large">Twitter</Typography>
+              </li>
+              <li>
+                <Typography variant="large">Instagram</Typography>
+              </li>
+              <li>
+                <Typography variant="large">Dribbble</Typography>
+              </li>
+            </ul>
           </div>
 
-          <div className="ss-go-top">
-            <a className="smoothscroll" title="Back to Top" href="#top">
-              top
-            </a>
+          <div className="column md:col-span-2 lg:col-span-1">
+            <Button className="py-6 w-full">Let's Talk</Button>
           </div>
         </div>
-        <div className={`ss-go-top ${isVisible ? "link-is-visible" : ""}`}>
-          <a
-            className="smoothscroll"
-            title="Back to Top"
-            href="#top"
-            onClick={scrollToTop}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 0l8 9h-6v15h-4v-15h-6z" />
-            </svg>
-          </a>
-        </div>
+
+        <GoTop isVisible={isVisible} scrollToTop={scrollToTop} />
       </footer>
-    </>
+    </Fragment>
   );
 };
 

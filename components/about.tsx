@@ -1,23 +1,24 @@
+import createArray from "@/utils/create-array";
+import { Typography } from "./ui/typography";
+
 const About = () => {
   return (
-    <section id="about" className="s-about target-section">
+    <section id="about" className="section-container pt-64 md:pt-72">
       <div className="s-about__section s-about__section--profile">
-        <div className="right-vert-line"></div>
+        <div className="">
+          <div className="section-intro grid grid-cols-2" data-num="01">
+            <Typography variant="subhead" className="mt-12">
+              About Me
+            </Typography>
+            <Typography variant="h1" className="pt-5">
+              I'm the kind of person who isn't afraid of challenges.
+            </Typography>
+          </div>
 
-        <div className="row">
-          <div className="column tab-full">
-            <div className="section-intro">
-              <h3 className="subhead" data-num="01">
-                About Me
-              </h3>
-              <h1 className="display-1 text-8xl">
-                I'm the kind of person who isn't afraid of challenges.
-              </h1>
-            </div>
+          <div className="space-y-4">
+            <Typography variant="h2">Profile</Typography>
 
-            <h3>Profile</h3>
-
-            <p>
+            <Typography variant="p" className="">
               In consectetuer turpis ut velit. Praesent metus tellus, elementum
               eu, semper a, adipiscing nec, purus. Vestibulum ante ipsum primis
               in faucibus orci luctus et ultrices posuere cubilia Curae; In ac
@@ -28,103 +29,51 @@ const About = () => {
               quis ligula mattis placerat. Suspendisse pulvinar, augue ac
               venenatis condimentum, sem libero volutpat nibh, nec pellentesque
               velit pede quis nunc.
-            </p>
+            </Typography>
           </div>
         </div>
       </div>
       {/* <!-- end s-about__section--profile --> */}
 
-      <div className="s-about__section mt-36 md:mt-0">
+      <div className="mt-36 ">
         <div className="row">
           <div className="column">
-            <h3>Career</h3>
+            <Typography variant="h2">Career</Typography>
           </div>
         </div>
 
-        <div className="row block-900-full work-positions grid md:grid-cols-2">
-          <div className="column">
-            <div className="position">
-              <div className="position__header">
-                <h6>
-                  <span className="position__co">Google</span>
-                  <span className="position__pos">Product Designer</span>
-                </h6>
-                <div className="position__timeframe">June 2017 - Present</div>
-              </div>
-
-              <p>
-                Pellentesque posuere. Etiam rhoncus. Praesent blandit laoreet
-                nibh. Aenean posuere, tortor sed cursus feugiat, nunc augue
-                blandit nunc, eu sollicitudin urna dolor sagittis lacus.
-              </p>
-            </div>
-          </div>
-          {/* <!-- end column --> */}
-          <div className="column">
-            <div className="position">
-              <div className="position__header">
-                <h6>
-                  <span className="position__co">Facebook</span>
-                  <span className="position__pos">UX Director</span>
-                </h6>
-                <div className="position__timeframe">
-                  August 2015 - June 2017
+        <div className="row block-900-full grid md:grid-cols-2 gap-5 pt-7">
+          {createArray(2).map((item) => (
+            <div className="column" key={item}>
+              <div className="border-t border-[#b3c2c1] py-7 space-y-4">
+                <div className="">
+                  <div className="flex items-center gap-5">
+                    <Typography
+                      variant="p"
+                      className="uppercase tracking-widest"
+                    >
+                      Google
+                    </Typography>
+                    <Typography variant="p">Product Designer</Typography>
+                  </div>
+                  <Typography
+                    variant="lead"
+                    className="font-extralight uppercase text-base tracking-widest leading-8"
+                  >
+                    June 2017 - Present
+                  </Typography>
                 </div>
-              </div>
 
-              <p>
-                Aliquam erat volutpat. Phasellus volutpat, metus eget egestas
-                mollis, lacus lacus blandit dui, id egestas quam mauris ut
-                lacus. Pellentesque dapibus hendrerit tortor.
-              </p>
-            </div>
-          </div>
-          {/* <!-- end column --> */}
-          <div className="column">
-            <div className="position">
-              <div className="position__header">
-                <h6>
-                  <span className="position__co">Dropbox</span>
-                  <span className="position__pos">Mobile App Designer</span>
-                </h6>
-                <div className="position__timeframe">
-                  April 2014 - August 2015
-                </div>
+                <Typography variant="p">
+                  Pellentesque posuere. Etiam rhoncus. Praesent blandit laoreet
+                  nibh. Aenean posuere, tortor sed cursus feugiat, nunc augue
+                  blandit nunc, eu sollicitudin urna dolor sagittis lacus.
+                </Typography>
               </div>
-
-              <p>
-                In hac habitasse platea dictumst. Donec pede justo, fringilla
-                vel, aliquet nec, vulputate eget, arcu. Fusce risus nisl,
-                viverra et, tempor et, pretium in, sapien. Phasellus volutpat,
-                metus eget.
-              </p>
             </div>
-          </div>
-          {/* <!-- end column --> */}
-          <div className="column">
-            <div className="position">
-              <div className="position__header">
-                <h6>
-                  <span className="position__co">Microsoft</span>
-                  <span className="position__pos">Product Designer</span>
-                </h6>
-                <div className="position__timeframe">
-                  June 2012 - February 2014
-                </div>
-              </div>
-
-              <p>
-                Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-                arcu. Curabitur blandit mollis lacus. Curabitur vestibulum
-                aliquam leo. Vivamus in erat ut urna cursus vestibulum.
-              </p>
-            </div>
-          </div>
-          {/* <!-- end column --> */}
+          ))}
         </div>
-        {/* <!-- work positions --> */}
       </div>
-      {/* <!-- end s-about__section --> */}
     </section>
   );
 };
