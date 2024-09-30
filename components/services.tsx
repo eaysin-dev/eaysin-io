@@ -4,29 +4,26 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion";
+import SectionHeader from "./ui/section-header";
 import { Typography } from "./ui/typography";
 
 const Services = () => {
   return (
     <section
       id="services"
-      className="s-services section-container relative pt-10 md:pt-36"
+      className="s-services section-container relative"
     >
       <div className="row s-services__content">
         <div className="vert-line"></div>
 
         <div className="">
-          <div className="section-intro grid grid-cols-2" data-num="02">
-            <Typography variant="subhead" className="mt-12">
-              Expertise
-            </Typography>
+          <SectionHeader
+            title="Expertise"
+            description="I focus on crafting web experiences and designs that works."
+            dataNum={"02"}
+          />
 
-            <Typography variant="h1" className="pt-5">
-              I focus on crafting web experiences and designs that works.
-            </Typography>
-          </div>
-
-          <Typography variant="large" className="lead">
+          <Typography variant="large">
             Suspendisse eu ligula. Duis arcu tortor, suscipit eget, imperdiet
             nec, imperdiet iaculis, ipsum. Nulla facilisi. Etiam rhoncus.
             Praesent blandit laoreet nibh. Donec quam felis, ultricies nec,

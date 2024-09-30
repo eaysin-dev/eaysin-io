@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { SiThreedotjs } from "react-icons/si";
 import HeaderMenu from "./header-menu";
 import { SheetDemo } from "./sheet";
 
@@ -66,15 +67,16 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`s-header  ${isSticky ? "sticky" : ""} ${
-        isOffset ? "offset" : ""
-      } ${isScrolling ? "scrolling" : ""}`}
+      className={`s-header !bg-background flex items-center justify-center z-50 ${
+        isSticky ? "sticky" : ""
+      } ${isOffset ? "offset" : ""} ${isScrolling ? "scrolling" : ""}`}
     >
-      <div className="hidden md:block">
+      <div className="hidden md:block w-full">
         <HeaderMenu />
       </div>
 
-      <div className="md:hidden">
+      <div className="md:hidden flex items-center justify-between w-full px-10">
+        <SiThreedotjs className="cursor-pointer" />
         <SheetDemo />
       </div>
     </header>

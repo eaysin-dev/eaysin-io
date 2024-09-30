@@ -11,78 +11,59 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { uuid } from "@/utils/shortid";
 import { SiThreedotjs } from "react-icons/si";
 
-const components: { title: string; href: string; description: string }[] = [
+const navigationMenu: {
+  id: string;
+  title: React.ReactNode;
+  link: string;
+}[] = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+    id: uuid(),
+    title: <SiThreedotjs size={22} />,
+    link: "/docs/primitives/alert-dialog",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
+    id: uuid(),
+    title: "About",
+    link: "/docs/primitives/alert-dialog",
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+    id: uuid(),
+    title: "Expertise",
+    link: "/docs/primitives/alert-dialog",
   },
   {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    id: uuid(),
+    title: "Recent Works",
+    link: "/docs/primitives/alert-dialog",
   },
   {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+    id: uuid(),
+    title: "Contact",
+    link: "/docs/primitives/alert-dialog",
   },
   {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+    id: uuid(),
+    title: "Blogs",
+    link: "/docs/primitives/alert-dialog",
   },
 ];
 
 export function NavigationMenuDemo() {
   return (
     <NavigationMenu>
-      <NavigationMenuList className="flex flex-col md:flex-row items-start md:items-center gap-3">
-        <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              <SiThreedotjs size={22} />
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Getting started
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Components
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Documentation
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
+      <NavigationMenuList className="flex flex-col md:flex-row items-start md:items-center gap-1">
+        {navigationMenu?.map((navigation) => (
+          <NavigationMenuItem key={navigation.id}>
+            <Link href={navigation?.link} legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                {navigation?.title}
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        ))}
       </NavigationMenuList>
     </NavigationMenu>
   );

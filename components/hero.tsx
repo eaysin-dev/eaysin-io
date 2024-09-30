@@ -5,14 +5,14 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="s-hero h-screen relative w-full overflow-hidden bg-transparent"
+      className="s-hero h-screen relative w-full overflow-hidden z-10"
     >
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black via-black/25 to-transparent"></div>
+      {/* <div className="absolute top-0 left-0 w-full h-full"></div> */}
 
-      <div className="h-full relative px-7 lg:px-64 text-center pt-[30vh] md:pt-[35vh] lg:pt-[42vh]">
+      <div className="h-full relative px-7 md:px-20 xl:px-52 text-center pt-[30vh] md:pt-[35vh] lg:pt-[37vh]">
         <Typography variant="display1">
-          Hello, I'm John Doe, a frontend developer & designer currently based
-          somewhere.
+          Hello, I'm Eaysin Arafat, a Frontend Developer with Extensive React
+          and Next.js Experience
           <span className="absolute top-[-1.2rem] left-0 h-[2px] w-[4.5rem] bg-[#2280de]"></span>
         </Typography>
 

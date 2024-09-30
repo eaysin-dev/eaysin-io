@@ -1,24 +1,22 @@
 import createArray from "@/utils/create-array";
+import SectionHeader from "./ui/section-header";
 import { Typography } from "./ui/typography";
 
 const About = () => {
   return (
-    <section id="about" className="section-container pt-64 md:pt-72">
+    <section id="about" className="section-container">
       <div className="s-about__section s-about__section--profile">
         <div className="">
-          <div className="section-intro grid grid-cols-2" data-num="01">
-            <Typography variant="subhead" className="mt-12">
-              About Me
-            </Typography>
-            <Typography variant="h1" className="pt-5">
-              I'm the kind of person who isn't afraid of challenges.
-            </Typography>
-          </div>
+          <SectionHeader
+            title="About Me"
+            description="I'm the kind of person who isn't afraid of challenges."
+            dataNum="01"
+          />
 
           <div className="space-y-4">
             <Typography variant="h2">Profile</Typography>
 
-            <Typography variant="p" className="">
+            <Typography variant="large" className="">
               In consectetuer turpis ut velit. Praesent metus tellus, elementum
               eu, semper a, adipiscing nec, purus. Vestibulum ante ipsum primis
               in faucibus orci luctus et ultrices posuere cubilia Curae; In ac
