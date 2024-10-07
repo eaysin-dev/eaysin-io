@@ -14,7 +14,7 @@ const variants = {
   p: "leading-7 ",
   blockquote: "mt-6 border-l-2 pl-6 italic",
   inlineCode:
-    "relative rounded bg-muted px-[1rem] py-[0.2rem] font-mono text-sm font-semibold",
+    "relative rounded bg-muted px-[.5rem] py-[0.2rem] font-mono text-sm font-semibold",
   lead: "text-xl text-muted-foreground",
   large: "text-lg font-semibold",
   small: "text-sm font-medium leading-none",

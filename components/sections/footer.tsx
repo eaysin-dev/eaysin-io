@@ -3,7 +3,7 @@
 import useContact from "@/hooks/useContact";
 import { CheckIcon, ClipboardIcon, Loader2 } from "lucide-react";
 import { Fragment, useEffect, useState } from "react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import {
   Dialog,
   DialogContent,
@@ -12,13 +12,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "./ui/dialog";
-import GoTop from "./ui/go-top/goTop";
-import { Input } from "./ui/input";
-import { Label } from "./ui/label";
-import { Textarea } from "./ui/textarea";
-import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
-import { Typography } from "./ui/typography";
+} from "../ui/dialog";
+import GoTop from "../ui/go-top/goTop";
+import { Input } from "../ui/input";
+import { Label } from "../ui/label";
+import { Textarea } from "../ui/textarea";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import { Typography } from "../ui/typography";
 
 const Footer = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -98,12 +98,12 @@ const Footer = () => {
                 {isCopied ? (
                   <CheckIcon
                     className="text-green-600 absolute top-2 right-2"
-                    size={12}
+                    size={15}
                   />
                 ) : (
                   <ClipboardIcon
                     className="text-gray-500 absolute top-2 right-2"
-                    size={12}
+                    size={14}
                   />
                 )}
               </div>
@@ -125,10 +125,12 @@ const Footer = () => {
             </Typography>
 
             <div>
-              <Typography variant="large">1600 Amphitheatre Parkway</Typography>
+              <Typography variant="large">
+                Real Crossing, College Road
+              </Typography>
               <Typography variant="large">Mountain View, California</Typography>
-              <Typography variant="large">94043 US</Typography>
-              <Typography variant="large">+197 543 2345</Typography>
+              <Typography variant="large">Sadar, Mymensingh, BD</Typography>
+              <Typography variant="large">+880 164 3226 078</Typography>
             </div>
           </div>
 
@@ -156,15 +158,15 @@ const Footer = () => {
           <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
             <DialogTrigger asChild>
               <div className="md:col-span-2 lg:col-span-1">
-                <Button className="py-6 w-full">Let's Talk</Button>
+                <Button className="py-6 w-full">Let&apos;s Talk</Button>
               </div>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[550px]">
               <DialogHeader>
                 <DialogTitle className="text-2xl">Contact Me</DialogTitle>
                 <DialogDescription className="mt-1">
-                  I’m excited to hear from you! Please fill out the form below
-                  to send me a message.
+                  I&apos;m excited to hear from you! Please fill out the form
+                  below to send me a message.
                 </DialogDescription>
               </DialogHeader>
               <form ref={formRef} onSubmit={onSubmit} className="space-y-4">

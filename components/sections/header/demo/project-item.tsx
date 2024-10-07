@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Badge } from "../ui/badge";
-import { Button } from "../ui/button";
-import { Typography } from "../ui/typography";
+import { Badge } from "../../../ui/badge";
+import { Button } from "../../../ui/button";
+import { Typography } from "../../../ui/typography";
 
 const ProjectItem = () => {
   return (

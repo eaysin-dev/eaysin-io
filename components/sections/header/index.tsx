@@ -6,15 +6,9 @@ import HeaderMenu from "./header-menu";
 import { SheetDemo } from "./sheet";
 
 const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [isOffset, setIsOffset] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
-
-  // Mobile Menu Toggle
-  const handleMenuToggle = () => {
-    setIsMenuOpen((prev) => !prev);
-  };
 
   // Scroll event to manage sticky header, offset, and scrolling states
   useEffect(() => {

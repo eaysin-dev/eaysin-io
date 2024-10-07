@@ -1,5 +1,5 @@
-import { Badge } from "./ui/badge";
-import { Typography } from "./ui/typography";
+import { Badge } from "../ui/badge";
+import { Typography } from "../ui/typography";
 
 const Hero = () => {
   return (
@@ -9,10 +9,10 @@ const Hero = () => {
     >
       {/* <div className="absolute top-0 left-0 w-full h-full"></div> */}
 
-      <div className="h-full relative px-7 md:px-20 xl:px-52 text-center pt-[30vh] md:pt-[35vh] lg:pt-[37vh]">
+      <div className="h-full relative px-8 md:px-6 lg:px-7 xl:px-36 text-center pt-[30vh] md:pt-[35vh] lg:pt-[37vh]">
         <Typography variant="display1">
-          Hello, I'm Eaysin Arafat, a Frontend Developer with Extensive React
-          and Next.js Experience
+          Hello, I&apos;m Eaysin Arafat, a Frontend Developer with Extensive
+          React and Next.js Experience
           <span className="absolute top-[-1.2rem] left-0 h-[2px] w-[4.5rem] bg-[#2280de]"></span>
         </Typography>
 

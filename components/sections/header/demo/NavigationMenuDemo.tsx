@@ -1,8 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import * as React from "react";
-
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -11,8 +8,10 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import Icon from "@/public/icons/Icon";
 import { uuid } from "@/utils/shortid";
-import { SiThreedotjs } from "react-icons/si";
+import Link from "next/link";
+import * as React from "react";
 
 const navigationMenu: {
   id: string;
@@ -21,7 +20,7 @@ const navigationMenu: {
 }[] = [
   {
     id: uuid(),
-    title: <SiThreedotjs size={22} />,
+    title: <Icon />,
     link: "/docs/primitives/alert-dialog",
   },
   {
