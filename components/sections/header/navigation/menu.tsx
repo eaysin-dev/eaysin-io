@@ -1,5 +1,6 @@
 import Icon from "@/public/icons/Icon";
 import { uuid } from "@/utils/shortid";
+import { ExternalLinkIcon } from "lucide-react";
 
 interface NavigationMenu {
   id: string;
@@ -35,7 +36,11 @@ export const navigationMenu: NavigationMenu[] = [
   },
   {
     id: uuid(),
-    title: "Blogs",
+    title: (
+      <>
+        Blogs <ExternalLinkIcon className="h-4 w-4 ml-1.5" />
+      </>
+    ),
     link: "https://eaysin-arafat.hashnode.dev/",
   },
 ];

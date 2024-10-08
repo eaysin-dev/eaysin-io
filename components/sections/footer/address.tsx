@@ -9,7 +9,6 @@ const Address = () => {
 
       <div>
         <Typography variant="large">Real Crossing, College Road</Typography>
-        <Typography variant="large">Mountain View, California</Typography>
         <Typography variant="large">Sadar, Mymensingh, BD</Typography>
         <Typography variant="large">+880 164 3226 078</Typography>
       </div>

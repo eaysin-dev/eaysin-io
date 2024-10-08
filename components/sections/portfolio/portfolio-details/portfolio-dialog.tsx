@@ -17,7 +17,7 @@ const PortfolioDialog = ({
         <Button>{buttonText}</Button>
       </DialogTrigger>
 
-      <DialogContent className="max-w-[calc(100%-2rem)] md:max-w-6xl h-[80vh] overflow-y-scroll">
+      <DialogContent className="max-w-[calc(100%-2rem)] md:max-w-6xl h-[75vh] overflow-y-scroll">
         <div>
           {title && (
             <h1 className="scroll-m-20 mb-10 text-4xl font-extrabold tracking-tight lg:text-5xl">

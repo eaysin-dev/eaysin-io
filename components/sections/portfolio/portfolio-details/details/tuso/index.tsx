@@ -1,11 +1,11 @@
 import { Portfolio } from "@/app/data/portfolio";
-
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Description from "../../ui/description";
 import ExternalResources from "../../ui/external-resources";
 import ListGroup from "../../ui/list-group";
-import Title from "../../ui/title";
 import { keyFeatures, usages } from "./data";
 import ProjectUsages from "./project-usages";
+import Responsibilities from "./responsibilities";
 
 const Tuso = ({ portfolio }: { portfolio: Portfolio }) => {
   return (
@@ -23,38 +23,54 @@ const Tuso = ({ portfolio }: { portfolio: Portfolio }) => {
         collaboration throughout the issue resolution process.
       </Description>
 
+      {/* Key Features */}
       <ListGroup
         title="Key Features"
         description="Tuso offers a range of features designed to streamline issue tracking and resolution:"
+        isCard
         listItems={keyFeatures}
       />
 
+      {/* My Responsibilities Section */}
+      <Responsibilities />
+
       <ProjectUsages usages={usages} />
 
-      <>
-        <Title title="Real-time Ticket Resolution" />
-        <Description>
+      {/* Additional Information */}
+      <Card className="mt-5">
+        <CardHeader>
+          <CardTitle>Real-time Ticket Resolution</CardTitle>
+        </CardHeader>
+
+        <CardContent>
           Tuso&apos;s integration of Remote Desktop Protocol (RDP) allows
           support staff to resolve issues efficiently by connecting to
           users&apos; systems remotely, diagnosing and fixing problems in
           real-time.
-        </Description>
-      </>
+        </CardContent>
+      </Card>
 
-      <>
-        <Title title="Benefits of Using Tuso" />
-        <Description>
-          The platform enhances the collaboration between users and support
-          staff, ensuring faster issue resolution and improved system
-          performance across the board.
-        </Description>
-        <Description>
-          With the real-time connectivity feature and instant notifications,
-          everyone stays updated on ticket statuses, resulting in a more
-          transparent and accountable issue management process.
-        </Description>
-      </>
+      {/* Additional Information */}
+      <Card className="mt-5">
+        <CardHeader>
+          <CardTitle>Benefits of Using Tuso</CardTitle>
+        </CardHeader>
 
+        <CardContent>
+          <Description>
+            The platform enhances the collaboration between users and support
+            staff, ensuring faster issue resolution and improved system
+            performance across the board.
+          </Description>
+          <Description>
+            With the real-time connectivity feature and instant notifications,
+            everyone stays updated on ticket statuses, resulting in a more
+            transparent and accountable issue management process.
+          </Description>
+        </CardContent>
+      </Card>
+
+      {/* External Resources */}
       <ExternalResources resources={portfolio?.externalResource} />
     </div>
   );

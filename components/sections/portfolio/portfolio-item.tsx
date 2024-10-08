@@ -20,7 +20,7 @@ const PortfolioItem = ({ portfolio }: { portfolio: Portfolio }) => {
   };
 
   return (
-    <Card className="border border-muted p-1" key={portfolio?.id}>
+    <Card className="border border-muted p-1 rounded-md" key={portfolio?.id}>
       <CardHeader>
         <CardTitle className="mb-2">{portfolio?.title}</CardTitle>
         <CardDescription>{portfolio?.description[0]}</CardDescription>
