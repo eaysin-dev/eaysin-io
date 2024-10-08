@@ -1,5 +1,7 @@
-import { Badge } from "../ui/badge";
-import { Typography } from "../ui/typography";
+import { accounts } from "@/app/data/accounts";
+import { Badge } from "@/components/ui/badge";
+import { Typography } from "@/components/ui/typography";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -18,18 +20,31 @@ const Hero = () => {
 
         <ul className="flex flex-wrap items-center gap-4 py-7 mt-3">
           <li>
-            <Badge variant={"default"} className="text-sm cursor-pointer">
-              GitHub
-            </Badge>
+            <Link href={accounts?.github} target="_blank">
+              <Badge variant={"default"} className="text-sm cursor-pointer">
+                GitHub
+              </Badge>
+            </Link>
           </li>
           <li>
-            <Badge className="text-sm">Linkedin</Badge>
+            <Link href={accounts?.linkedin} target="_blank">
+              <Badge className="text-sm">Linkedin</Badge>
+            </Link>
           </li>
           <li>
-            <Badge className="text-sm">Twitter</Badge>
+            <Link href={accounts?.leetCode} target="_blank">
+              <Badge className="text-sm">LeetCode</Badge>
+            </Link>
           </li>
           <li>
-            <Badge className="text-sm">My Case Studies & Blogs</Badge>
+            <Link href={accounts?.twitter} target="_blank">
+              <Badge className="text-sm">Twitter</Badge>
+            </Link>
+          </li>
+          <li>
+            <Link href={"https://eaysin-arafat.hashnode.dev/"} target="_blank">
+              <Badge className="text-sm">My Case Studies & Blogs</Badge>
+            </Link>
           </li>
         </ul>
       </div>
@@ -39,7 +54,6 @@ const Hero = () => {
           href="#about"
           className="smoothscroll absolute bottom-[1.5rem] right-9 flex items-center justify-center bg-black rounded-full size-[3rem] hover:bg-[#2280de] transition-all"
         >
-          {/* <MdArrowDownward className="text-white" size={25} /> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"

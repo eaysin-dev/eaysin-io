@@ -1,16 +1,15 @@
 "use client";
 
 import {
-  NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
+  NavigationMenu as ShadcnNavigationMenu,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import Icon from "@/public/icons/Icon";
 import { uuid } from "@/utils/shortid";
-import Link from "next/link";
 import * as React from "react";
 
 const navigationMenu: {
@@ -21,53 +20,88 @@ const navigationMenu: {
   {
     id: uuid(),
     title: <Icon />,
-    link: "/docs/primitives/alert-dialog",
+    link: "/", 
   },
   {
     id: uuid(),
     title: "About",
-    link: "/docs/primitives/alert-dialog",
+    link: "#about",
   },
   {
     id: uuid(),
     title: "Expertise",
-    link: "/docs/primitives/alert-dialog",
+    link: "#expertise",
   },
   {
     id: uuid(),
     title: "Recent Works",
-    link: "/docs/primitives/alert-dialog",
+    link: "#recent-works",
   },
   {
     id: uuid(),
     title: "Contact",
-    link: "/docs/primitives/alert-dialog",
+    link: "#contact",
   },
   {
     id: uuid(),
     title: "Blogs",
-    link: "/docs/primitives/alert-dialog",
+    link: "https://eaysin-arafat.hashnode.dev/",
   },
 ];
 
-export function NavigationMenuDemo() {
+interface NavigationMenuProps {
+  onMenuItemClick: () => void; // Prop type for menu item click handler
+}
+
+export const NavigationMenu = ({ onMenuItemClick }: NavigationMenuProps) => {
+  const handleScroll = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    link: string
+  ) => {
+    event.preventDefault();
+
+    if (link === "/") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      if (onMenuItemClick) onMenuItemClick();
+    } else {
+      const targetId = link.replace("#", "");
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+        if (onMenuItemClick) onMenuItemClick();
+      } else if (link.startsWith("http")) {
+        window.open(link, "_blank", "noopener,noreferrer");
+        if (onMenuItemClick) onMenuItemClick();
+      }
+    }
+  };
+
   return (
-    <NavigationMenu>
+    <ShadcnNavigationMenu>
       <NavigationMenuList className="flex flex-col md:flex-row items-start md:items-center gap-1">
         {navigationMenu?.map((navigation) => (
-          <NavigationMenuItem key={navigation.id}>
-            <Link href={navigation?.link} legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                {navigation?.title}
-              </NavigationMenuLink>
-            </Link>
+          <NavigationMenuItem key={navigation.id} className="cursor-pointer">
+            <NavigationMenuLink
+              className={navigationMenuTriggerStyle()}
+              onClick={(event) => handleScroll(event, navigation.link)}
+            >
+              {navigation.title}
+            </NavigationMenuLink>
           </NavigationMenuItem>
         ))}
       </NavigationMenuList>
-    </NavigationMenu>
+    </ShadcnNavigationMenu>
   );
-}
+};
 
+// ListItem component remains unchanged
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
