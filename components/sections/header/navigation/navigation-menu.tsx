@@ -8,57 +8,23 @@ import {
   NavigationMenu as ShadcnNavigationMenu,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import Icon from "@/public/icons/Icon";
-import { uuid } from "@/utils/shortid";
-import * as React from "react";
 
-const navigationMenu: {
-  id: string;
-  title: React.ReactNode;
-  link: string;
-}[] = [
-  {
-    id: uuid(),
-    title: <Icon />,
-    link: "/", 
-  },
-  {
-    id: uuid(),
-    title: "About",
-    link: "#about",
-  },
-  {
-    id: uuid(),
-    title: "Expertise",
-    link: "#expertise",
-  },
-  {
-    id: uuid(),
-    title: "Recent Works",
-    link: "#recent-works",
-  },
-  {
-    id: uuid(),
-    title: "Contact",
-    link: "#contact",
-  },
-  {
-    id: uuid(),
-    title: "Blogs",
-    link: "https://eaysin-arafat.hashnode.dev/",
-  },
-];
+import * as React from "react";
+import { navigationMenu } from "./menu";
 
 interface NavigationMenuProps {
-  onMenuItemClick: () => void; // Prop type for menu item click handler
+  onMenuItemClick: () => void;
 }
 
 export const NavigationMenu = ({ onMenuItemClick }: NavigationMenuProps) => {
+  const [activeLink, setActiveLink] = React.useState<string>("");
+
   const handleScroll = (
     event: React.MouseEvent<HTMLAnchorElement>,
     link: string
   ) => {
     event.preventDefault();
+    setActiveLink(link);
 
     if (link === "/") {
       window.scrollTo({
@@ -86,16 +52,23 @@ export const NavigationMenu = ({ onMenuItemClick }: NavigationMenuProps) => {
   return (
     <ShadcnNavigationMenu>
       <NavigationMenuList className="flex flex-col md:flex-row items-start md:items-center gap-1">
-        {navigationMenu?.map((navigation) => (
-          <NavigationMenuItem key={navigation.id} className="cursor-pointer">
-            <NavigationMenuLink
-              className={navigationMenuTriggerStyle()}
-              onClick={(event) => handleScroll(event, navigation.link)}
-            >
-              {navigation.title}
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-        ))}
+        {navigationMenu?.map((navigation) => {
+          return (
+            <NavigationMenuItem key={navigation.id} className="cursor-pointer">
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                onClick={(event) => handleScroll(event, navigation.link)}
+                data-active={
+                  activeLink === navigation.link && navigation.link !== "/"
+                    ? "true"
+                    : undefined
+                }
+              >
+                {navigation.title}
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+          );
+        })}
       </NavigationMenuList>
     </ShadcnNavigationMenu>
   );

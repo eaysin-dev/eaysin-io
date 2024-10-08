@@ -8,8 +8,8 @@ export interface ClientInformation {
 
 export interface ListItem {
   id: string;
-  label: string;
-  description: string;
+  label?: string;
+  description?: string;
 }
 
 export interface ExternalResource {
@@ -19,6 +19,7 @@ export interface ExternalResource {
 
 export interface Portfolio {
   id: string;
+  identity: string;
   title: string;
   subtitle: string;
   category: "reactJs" | "nextJs" | "library";
@@ -35,7 +36,8 @@ export interface Portfolio {
 export const portfolio: Portfolio[] = [
   {
     id: uuid(),
-    title: "React-form-interactions",
+    identity: "reactFormInteractions",
+    title: "react-form-interactions",
     subtitle: "A React Form State and Validation Library",
     category: "library",
     description: [
@@ -54,6 +56,7 @@ export const portfolio: Portfolio[] = [
   },
   {
     id: uuid(),
+    identity: "tuso",
     title: "TUSO",
     subtitle:
       "TUSO is a platform for reporting, managing, and resolving system issues, featuring secure user authentication, real-time notifications, and an integrated Remote Desktop Protocol (RDP) for live troubleshooting.",
@@ -83,6 +86,7 @@ export const portfolio: Portfolio[] = [
   },
   {
     id: uuid(),
+    identity: "carepro",
     title: "SmartCare Pro",
     subtitle:
       "Carepro is a government-sponsored healthcare system designed to streamline patient management, treatment tracking, and doctor-patient interactions.",
@@ -109,6 +113,7 @@ export const portfolio: Portfolio[] = [
     externalResource: [
       {
         id: uuid(),
+        label: "Carepro Usage Tutorial (YouTube Playlist)",
         YouTube:
           "https://youtube.com/playlist?list=PLKI8pcPmyPbeK6LZBqhcXy4xHgIgxrfxF&si=GC3HC8EG1F-W145u",
       },
@@ -116,6 +121,7 @@ export const portfolio: Portfolio[] = [
   },
   {
     id: uuid(),
+    identity: "hybridChart",
     title: "HybridChart",
     subtitle: "Healthcare System",
     description: [
@@ -135,6 +141,7 @@ export const portfolio: Portfolio[] = [
   },
   {
     id: uuid(),
+    identity: "techConnect",
     title: "TechConnect",
     subtitle: "Employee Management System",
     description: [
@@ -154,6 +161,7 @@ export const portfolio: Portfolio[] = [
   },
   {
     id: uuid(),
+    identity: "fileDrive",
     title: "File Drive",
     subtitle: "A comprehensive file management platform",
     category: "nextJs",
@@ -213,6 +221,7 @@ export const portfolio: Portfolio[] = [
   },
   {
     id: uuid(),
+    identity: "ecommarce",
     title: "Ecommarce Platform",
     subtitle:
       "an online destination where buyers shop for goods and sellers offer products and services.",
@@ -269,6 +278,7 @@ export const portfolio: Portfolio[] = [
   },
   {
     id: uuid(),
+    identity: "jsUtility",
     title: "js-utility",
     subtitle:
       "A modern JavaScript utility library delivering modularity, performance & extras",

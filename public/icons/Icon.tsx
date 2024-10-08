@@ -3,8 +3,8 @@ const Icon = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      height="32"
-      width="32"
+      height="30"
+      width="30"
       zoomAndPan="magnify"
       viewBox="0 0 375 374.999991"
       preserveAspectRatio="xMidYMid meet"

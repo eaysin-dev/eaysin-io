@@ -20,7 +20,7 @@ const ExternalResources = ({ resources }: ExternalResourcesProps) => (
                 rel="noopener noreferrer"
                 className="text-sm text-blue-500 hover:underline capitalize"
               >
-                {resource.name || "View Resource"}
+                {resource.label || "View Resource"}
               </a>
             </li>
           ))}

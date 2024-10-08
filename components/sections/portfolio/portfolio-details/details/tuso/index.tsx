@@ -32,7 +32,7 @@ const Tuso = ({ portfolio }: { portfolio: Portfolio }) => {
       <ProjectUsages usages={usages} />
 
       <>
-        <Title title="Real-time Ticket Resolution" />={" "}
+        <Title title="Real-time Ticket Resolution" />
         <Description>
           Tuso&apos;s integration of Remote Desktop Protocol (RDP) allows
           support staff to resolve issues efficiently by connecting to
@@ -42,7 +42,7 @@ const Tuso = ({ portfolio }: { portfolio: Portfolio }) => {
       </>
 
       <>
-        <Title title="Benefits of Using Tuso" />={" "}
+        <Title title="Benefits of Using Tuso" />
         <Description>
           The platform enhances the collaboration between users and support
           staff, ensuring faster issue resolution and improved system

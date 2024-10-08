@@ -22,7 +22,7 @@ const Header: React.FC = () => {
       <div className="md:hidden flex items-center justify-between w-full px-10">
         <a href="/" onClick={handleHomeClick} className="">
           <Icon />
-        </a>{" "}
+        </a>
         <HeaderSheet />
       </div>
     </header>

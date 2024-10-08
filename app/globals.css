@@ -161,6 +161,6 @@
   }
 
   .section-container {
-    @apply mx-7 xl:mx-[12rem] 2xl:mx-[20rem] pt-56 md:pt-72 overflow-hidden;
+    @apply mx-7 xl:mx-[12rem] 2xl:mx-[20rem] pt-44 md:pt-72 overflow-hidden;
   }
 }

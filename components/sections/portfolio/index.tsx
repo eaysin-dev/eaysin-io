@@ -2,7 +2,6 @@
 
 import { portfolio } from "@/app/data/portfolio";
 import React from "react";
-import { Button } from "../../ui/button";
 import SectionHeader from "../../ui/section-header";
 import { Tabs, TabsList, TabsTrigger } from "../../ui/tabs";
 import PortfolioItem from "./portfolio-item";
@@ -47,9 +46,9 @@ const Portfolio = () => {
           return <PortfolioItem portfolio={recentWork} key={recentWork?.id} />;
         })}
       </div>
-      <div className="flex items-center justify-center w-full mt-16">
+      {/* <div className="flex items-center justify-center w-full mt-16">
         <Button>See More</Button>
-      </div>
+      </div> */}
     </section>
   );
 };

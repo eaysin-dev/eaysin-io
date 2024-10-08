@@ -4,14 +4,11 @@ import { inputs, returns } from "../data";
 
 export const APISection = () => (
   <Card>
-    <CardHeader>Api</CardHeader>
+    <CardHeader>
+      <h2 className="text-xl font-semibold">Api</h2>
+    </CardHeader>{" "}
     <CardContent>
-      <ListGroup
-        title="Inputs"
-        description="useFormInteractions(initialValues, validationRulesConfig)"
-        listItems={inputs}
-        isCodedLabel
-      />
+      <ListGroup title="Inputs" listItems={inputs} isCodedLabel />
 
       <ListGroup
         title="Returns"

@@ -9,10 +9,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import ReactFormInteractions from "./portfolio-details/details/react-form-interaction";
-import DocsDialog from "./portfolio-details/docs-dialog";
+import { portfolioDetails } from "./portfolio-details";
+import PortfolioDialog from "./portfolio-details/portfolio-dialog";
 
 const PortfolioItem = ({ portfolio }: { portfolio: Portfolio }) => {
+  const isValidPortfolioKey = (
+    key: string
+  ): key is keyof ReturnType<typeof portfolioDetails> => {
+    return key in portfolioDetails({} as Portfolio);
+  };
+
   return (
     <Card className="border border-muted p-1" key={portfolio?.id}>
       <CardHeader>
@@ -70,10 +76,11 @@ const PortfolioItem = ({ portfolio }: { portfolio: Portfolio }) => {
               {portfolio?.isConfidential ? "View Case Study" : "Github"}
             </a>
           </Button>
-
-          <DocsDialog title="react-form-interactions">
-            <ReactFormInteractions />
-          </DocsDialog>
+          <PortfolioDialog title={portfolio?.title}>
+            {isValidPortfolioKey(portfolio?.identity)
+              ? portfolioDetails(portfolio)[portfolio?.identity]
+              : null}
+          </PortfolioDialog>
         </div>
       </CardFooter>
     </Card>

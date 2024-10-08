@@ -37,9 +37,13 @@ const Career = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <Typography variant="p" className="text-gray-500 mb-4">
+              <Typography
+                variant="p"
+                className="text-sm text-muted-foreground mb-4"
+              >
                 {career.description}
               </Typography>
+
               <div className="mb-2 space-y-1.5">
                 <Badge variant="outline" className="mr-2">
                   {career.company}

@@ -1,7 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { APISection } from "./tabs/api-section";
 import { OverviewSection } from "./tabs/overview";
-import { UsageExample } from "./tabs/usage-example";
 import { ValidationRulesSection } from "./tabs/validation-rules";
 
 const ReactFormInteractions = () => {
@@ -11,8 +10,7 @@ const ReactFormInteractions = () => {
         <TabsList className="mb-4">
           <TabsTrigger value="overview">Overview</TabsTrigger>
           <TabsTrigger value="api">API</TabsTrigger>
-          <TabsTrigger value="validation">Validation Rules</TabsTrigger>
-          <TabsTrigger value="example">Usage Example</TabsTrigger>
+          <TabsTrigger value="validation">Validation</TabsTrigger>
         </TabsList>
       </div>
 
@@ -26,10 +24,6 @@ const ReactFormInteractions = () => {
 
       <TabsContent value="validation">
         <ValidationRulesSection />
-      </TabsContent>
-
-      <TabsContent value="example">
-        <UsageExample />
       </TabsContent>
     </Tabs>
   );

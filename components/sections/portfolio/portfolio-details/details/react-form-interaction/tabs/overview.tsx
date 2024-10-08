@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -5,6 +6,7 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import { Typography } from "@/components/ui/typography";
+import Link from "next/link";
 import DocsDescription from "../../../ui/description";
 import ListGroup from "../../../ui/list-group";
 import { keyFeatures } from "../data";
@@ -25,6 +27,14 @@ export const OverviewSection = () => (
 
       <ListGroup listItems={keyFeatures} isCodedLabel />
     </CardContent>
-    <CardFooter className="text-right">Version: 2.0.2</CardFooter>
+    <CardFooter className="text-right flex flex-col items-start gap-2">
+      <Typography variant="inlineCode">Version: 2.0.2 </Typography>
+      Check out the usage example and more information in the{" "}
+      <Link href={""}>
+        <Button variant={"secondary"} className="underline">
+          GitHub Repository.
+        </Button>
+      </Link>
+    </CardFooter>
   </Card>
 );
