@@ -1,11 +1,11 @@
-import Carepro from "./details/carepro";
-import EcommarcePlatform from "./details/ecommarce-platform";
-import FileDrive from "./details/file-drive";
-import HybridChart from "./details/hybrid-chart/index";
-import JsUtility from "./details/js-utility";
-import ReactFormInteractions from "./details/react-form-interaction";
-import TechConnect from "./details/tech-connect";
-import Tuso from "./details/tuso";
+import Carepro from "./carepro";
+import EcommarcePlatform from "./ecommarce-platform";
+import FileDrive from "./file-drive";
+import HybridChart from "./hybrid-chart/index";
+import JsUtility from "./js-utility";
+import ReactFormInteractions from "./react-form-interaction";
+import TechConnect from "./tech-connect";
+import Tuso from "./tuso";
 
 export const portfolioDetails = () => {
   return {

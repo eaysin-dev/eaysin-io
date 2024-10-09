@@ -1,15 +1,15 @@
-import ProjectApis from "../../../../../ui/project-details/apis";
-import ProjectChallenges from "../../../../../ui/project-details/challenges";
-import ProjectImprovements from "../../../../../ui/project-details/improvements";
-import ProjectInstallation from "../../../../../ui/project-details/installation";
-import ProjectKeyFeatures from "../../../../../ui/project-details/key-features";
-import ProjectLessons from "../../../../../ui/project-details/lessons";
-import ProjectOverview from "../../../../../ui/project-details/overview";
-import ProjectResources from "../../../../../ui/project-details/resources";
-import ProjectRole from "../../../../../ui/project-details/role";
-import ProjectTechStack from "../../../../../ui/project-details/tech-stack";
-import ProjectUsage from "../../../../../ui/project-details/usage";
-import ProjectValidationsFeature from "../../../../../ui/project-details/validations-feature";
+import ProjectApis from "../../../../ui/project-details/apis";
+import ProjectChallenges from "../../../../ui/project-details/challenges";
+import ProjectImprovements from "../../../../ui/project-details/improvements";
+import ProjectInstallation from "../../../../ui/project-details/installation";
+import ProjectKeyFeatures from "../../../../ui/project-details/key-features";
+import ProjectLessons from "../../../../ui/project-details/lessons";
+import ProjectOverview from "../../../../ui/project-details/overview";
+import ProjectResources from "../../../../ui/project-details/resources";
+import ProjectRole from "../../../../ui/project-details/role";
+import ProjectTechStack from "../../../../ui/project-details/tech-stack";
+import ProjectUsage from "../../../../ui/project-details/usage";
+import ProjectValidationsFeature from "../../../../ui/project-details/validations-feature";
 import { reactFormInteractionsDocs } from "./data";
 
 const ReactFormInteractions = () => {

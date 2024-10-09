@@ -1,13 +1,13 @@
 import { uuid } from "@/utils/shortid";
-import { Api } from "../../../../../ui/project-details/apis";
-import { ChallengeType } from "../../../../../ui/project-details/challenges";
-import { InstallationStep } from "../../../../../ui/project-details/installation";
-import { KeyFeature } from "../../../../../ui/project-details/key-features";
-import { ProjectResourcesType } from "../../../../../ui/project-details/resources";
-import { Responsibility } from "../../../../../ui/project-details/role";
-import { Screenshot } from "../../../../../ui/project-details/screenshots";
-import { UsageType } from "../../../../../ui/project-details/usage";
-import { ValidationRule } from "../../../../../ui/project-details/validations-feature";
+import { Api } from "../../../../ui/project-details/apis";
+import { ChallengeType } from "../../../../ui/project-details/challenges";
+import { InstallationStep } from "../../../../ui/project-details/installation";
+import { KeyFeature } from "../../../../ui/project-details/key-features";
+import { ProjectResourcesType } from "../../../../ui/project-details/resources";
+import { Responsibility } from "../../../../ui/project-details/role";
+import { Screenshot } from "../../../../ui/project-details/screenshots";
+import { UsageType } from "../../../../ui/project-details/usage";
+import { ValidationRule } from "../../../../ui/project-details/validations-feature";
 
 export interface ProjectDetails {
   id: string;
@@ -128,12 +128,12 @@ export const careproDocs: ProjectDetails = {
     {
       id: uuid(),
       alt: "Screenshot of Carepro form interactions",
-      src: "/portfolio/healthcare/02.png",
+      src: "/portfolio/carepro/02.png",
     },
     {
       id: uuid(),
       alt: "Dashboard view of Carepro medical encounters",
-      src: "/portfolio/healthcare/04.png",
+      src: "/portfolio/carepro/04.png",
     },
   ],
   role: "Full-Stack Developer",
