@@ -133,7 +133,6 @@ export const portfolio: Portfolio[] = [
     technologies: ["JavaScript", "React Js", "Redux Toolkit", "Scss"],
     clientInformation: {
       company: "Blackrock IT Solutions",
-      date: "",
     },
     githubLink: "",
     liveLink: "",

@@ -9,14 +9,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import BaseModal from "@/components/ui/modal";
 import { portfolioDetails } from "./portfolio-details";
-import PortfolioDialog from "./portfolio-details/portfolio-dialog";
 
 const PortfolioItem = ({ portfolio }: { portfolio: Portfolio }) => {
   const isValidPortfolioKey = (
     key: string
   ): key is keyof ReturnType<typeof portfolioDetails> => {
-    return key in portfolioDetails({} as Portfolio);
+    return key in portfolioDetails();
   };
 
   return (
@@ -76,11 +76,11 @@ const PortfolioItem = ({ portfolio }: { portfolio: Portfolio }) => {
               {portfolio?.isConfidential ? "View Case Study" : "Github"}
             </a>
           </Button>
-          <PortfolioDialog title={portfolio?.title}>
+          <BaseModal title={portfolio?.title} size="large">
             {isValidPortfolioKey(portfolio?.identity)
-              ? portfolioDetails(portfolio)[portfolio?.identity]
+              ? portfolioDetails()[portfolio?.identity]
               : null}
-          </PortfolioDialog>
+          </BaseModal>
         </div>
       </CardFooter>
     </Card>

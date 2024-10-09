@@ -1,20 +1,21 @@
-import { Portfolio } from "@/app/data/portfolio";
-import Carepro from "./details/carepro/carepro";
+import Carepro from "./details/carepro";
+import EcommarcePlatform from "./details/ecommarce-platform";
 import FileDrive from "./details/file-drive";
-import HybridChart from "./details/hybrid-chart";
+import HybridChart from "./details/hybrid-chart/index";
+import JsUtility from "./details/js-utility";
 import ReactFormInteractions from "./details/react-form-interaction";
 import TechConnect from "./details/tech-connect";
 import Tuso from "./details/tuso";
 
-export const portfolioDetails = (portfolio: Portfolio) => {
+export const portfolioDetails = () => {
   return {
     reactFormInteractions: <ReactFormInteractions />,
-    tuso: <Tuso portfolio={portfolio} />,
-    carepro: <Carepro portfolio={portfolio} />,
+    tuso: <Tuso />,
+    carepro: <Carepro />,
     hybridChart: <HybridChart />,
     techConnect: <TechConnect />,
     fileDrive: <FileDrive />,
-    ecommarce: "",
-    jsUtility: "",
+    ecommarce: <EcommarcePlatform />,
+    jsUtility: <JsUtility />,
   };
 };
