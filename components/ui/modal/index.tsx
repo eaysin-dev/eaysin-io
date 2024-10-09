@@ -12,7 +12,7 @@ const sizeClasses: Record<DialogSize, string> = {
 };
 
 const PortfolioDialog = ({
-  buttonText = "Details",
+  buttonText,
   title,
   children,
   size = "medium", // Default size is medium

@@ -67,16 +67,18 @@ const PortfolioItem = ({ portfolio }: { portfolio: Portfolio }) => {
         )}
 
         <div className="flex justify-between w-full">
-          <Button asChild variant="outline">
-            <a
-              href="https://your-portfolio.com/project-details"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {portfolio?.isConfidential ? "View Case Study" : "Github"}
-            </a>
-          </Button>
-          <BaseModal title={portfolio?.title} size="large">
+          {!portfolio?.isConfidential && (
+            <Button asChild variant="outline">
+              <a
+                href="https://your-portfolio.com/project-details"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Github
+              </a>
+            </Button>
+          )}
+          <BaseModal title={portfolio?.title} buttonText="Details" size="large">
             {isValidPortfolioKey(portfolio?.identity)
               ? portfolioDetails()[portfolio?.identity]
               : null}
