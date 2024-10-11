@@ -91,7 +91,7 @@ const Hero = () => {
         </ul>
       </div>
 
-      <div className="relative bottom-5 right-2">
+      {/* <div className="relative bottom-5 right-2">
         <a
           href="#about"
           className="smoothscroll absolute bottom-[1.5rem] right-9 flex items-center justify-center bg-black rounded-full size-[3rem] hover:bg-baseColor transition-all"
@@ -107,7 +107,7 @@ const Hero = () => {
             <path d="M12 24l-8-9h6v-15h4v15h6z" />
           </svg>
         </a>
-      </div>
+      </div> */}
     </section>
   );
 };

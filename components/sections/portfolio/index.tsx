@@ -23,7 +23,7 @@ const Portfolio = () => {
       <SectionHeader
         title="Recent Works"
         description="Here are some of my recent projects and contributions. Check them out!"
-        dataNum="03"
+        dataNum="02"
       />
       <div className="flex items-center justify-center mt-12 md:mt-0 mb-2 md:mb-5">
         <Tabs
