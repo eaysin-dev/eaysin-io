@@ -31,7 +31,6 @@
   width: 100%;
   height: 4.3rem;
   position: absolute;
-  top: 0.7rem;
   left: 0;
 }
 
@@ -88,7 +87,7 @@
 
 .hero-scroll .scroll-link:hover,
 .hero-scroll .scroll-link:focus {
-  background-color: #2280de;
+  background-color: var(--base-color);
 }
 
 @layer base {
@@ -121,6 +120,31 @@
     --iconBgColor: white;
     --iconColor: black;
     --section-title-bg-content: rgba(0, 0, 0, 0.12);
+
+    /* Extra Color Variables */
+    --base-color: #2280de;
+    --hero-bg: 240 80% 98%; /* Light background for hero section */
+    --cta-button: 220 90% 56%; /* Call-to-action button color */
+    --cta-button-hover: 220 80% 50%; /* Hover state for call-to-action button */
+
+    --header-bg: 0 0% 95%; /* Light background for header */
+    --footer-bg: 240 7% 97%; /* Light background for footer */
+
+    --text-highlight: 12 89% 55%; /* Text highlight color for important phrases */
+
+    --button-secondary: 240 50% 20%; /* Secondary button color */
+    --button-secondary-hover: 240 70% 25%; /* Hover state for secondary button */
+
+    --link-color: 220 95% 45%; /* Default link color */
+    --link-hover: 220 95% 38%; /* Link hover color */
+
+    /* Gradients for backgrounds and buttons */
+    --gradient-1: linear-gradient(90deg, hsl(220 80% 60%), hsl(173 58% 45%));
+    --gradient-2: linear-gradient(135deg, hsl(43 74% 66%), hsl(27 87% 67%));
+
+    /* Special effects */
+    --hover-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    --focus-outline: 0px 0px 0px 3px rgba(66, 153, 225, 0.5);
   }
 
   .dark {
@@ -151,6 +175,30 @@
     --iconBgColor: black;
     --iconColor: white;
     --section-title-bg-content: rgba(196, 196, 196, 0.12);
+
+    /* Dark Mode Variables */
+    --base-color: #2280de;
+    --hero-bg: 240 10% 15%;
+
+    --cta-button: 220 50% 35%; /* Dark mode for call-to-action button */
+    --cta-button-hover: 220 70% 40%; /* Dark mode hover state */
+
+    --header-bg: 240 8% 12%; /* Dark background for header */
+    --footer-bg: 240 15% 8%; /* Dark background for footer */
+
+    --text-highlight: 12 74% 63%; /* Dark mode highlight color */
+
+    --button-secondary: 240 30% 10%; /* Dark mode secondary button */
+    --button-secondary-hover: 240 60% 15%; /* Dark mode hover state */
+
+    --link-color: 220 50% 85%; /* Dark mode link color */
+    --link-hover: 220 50% 75%; /* Dark mode hover link color */
+
+    --gradient-1: linear-gradient(90deg, hsl(220 50% 35%), hsl(160 40% 30%));
+    --gradient-2: linear-gradient(135deg, hsl(43 54% 40%), hsl(27 67% 40%));
+
+    --hover-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1); /* Shadow effect for dark mode */
+    --focus-outline: 0px 0px 0px 3px rgba(66, 153, 225, 0.8); /* Dark mode focus outline */
   }
 }
 
@@ -163,6 +211,6 @@
   }
 
   .section-container {
-    @apply mx-7 xl:mx-[12rem] 2xl:mx-[20rem] pt-44 md:pt-72 overflow-hidden;
+    @apply mx-7 xl:mx-[12rem] 2xl:mx-[20rem] pt-44 md:pt-52 overflow-hidden;
   }
 }

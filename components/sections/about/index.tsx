@@ -1,6 +1,6 @@
 import SectionHeader from "../../ui/section-header";
 import { Typography } from "../../ui/typography";
-import Career from "./career";
+import Career from "../expertise/career";
 
 const About = () => {
   return (

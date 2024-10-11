@@ -16,7 +16,7 @@ const Navigation = ({ onMenuItemClick }: NavigationProps) => {
   };
 
   return (
-    <div className="header-content h-20 relative flex flex-col md:flex-row items-center justify-between w-full gap-3 px-8 md:px-6 lg:px-7 xl:px-36">
+    <div className="header-content h-20 relative flex flex-col md:flex-row items-center justify-between w-full gap-3 px-5 md:px-6 lg:px-7 xl:px-36">
       <NavigationMenu onMenuItemClick={onMenuItemClick} />
 
       <div className="flex items-start md:items-center flex-col md:flex-row gap-3">

@@ -8,10 +8,14 @@ import useHeader from "./useHeader";
 const Header: React.FC = () => {
   const { handleHomeClick, isOffset, isScrolling, isSticky } = useHeader();
 
+  console.log({ isScrolling, isSticky, isOffset });
+
   return (
     <header
       className={`s-header !bg-background flex items-center justify-center z-50 ${
-        isSticky ? "sticky" : ""
+        isSticky
+          ? "sticky"
+          : "bg-gradient-to-r from-[hsl(var(--muted))] via-[hsl(var(--background))] to-[hsl(var(--muted))]"
       } ${isOffset ? "offset" : ""} ${isScrolling ? "scrolling" : ""}`}
     >
       <div className="hidden md:block w-full">

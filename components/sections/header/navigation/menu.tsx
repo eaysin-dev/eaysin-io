@@ -16,11 +16,6 @@ export const navigationMenu: NavigationMenu[] = [
   },
   {
     id: uuid(),
-    title: "About",
-    link: "#about",
-  },
-  {
-    id: uuid(),
     title: "Expertise",
     link: "#expertise",
   },
