@@ -6,11 +6,10 @@ import Portfolio from "@/components/sections/portfolio";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-gradient-to-r from-[hsl(var(--muted))] via-[hsl(var(--background))] to-[hsl(var(--muted))]">
       {/* <Preloader /> */}
       <Header />
       <Hero />
-      {/* <About /> */}
       <Services />
       <Portfolio />
       <Footer />
