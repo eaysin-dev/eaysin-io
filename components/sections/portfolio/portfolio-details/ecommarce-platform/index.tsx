@@ -15,7 +15,7 @@ const EcommarcePlatform = () => {
     <div className="">
       <ProjectOverview
         title={ecommarceDocs.title}
-        duration={ecommarceDocs.duration}
+        duration={ecommarceDocs.clientInformation?.date || ""}
         organization={ecommarceDocs.organization}
         tagline={ecommarceDocs.tagline}
         overview={ecommarceDocs.overview}

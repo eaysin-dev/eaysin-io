@@ -14,7 +14,7 @@ const Carepro = () => {
     <div className="">
       <ProjectOverview
         title={careproDocs.title}
-        duration={careproDocs.duration}
+        duration={careproDocs.clientInformation?.date || ""}
         organization={careproDocs.organization}
         tagline={careproDocs.tagline}
         overview={careproDocs.overview}

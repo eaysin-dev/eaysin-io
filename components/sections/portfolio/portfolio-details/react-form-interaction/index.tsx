@@ -17,7 +17,7 @@ const ReactFormInteractions = () => {
     <div className="">
       <ProjectOverview
         title={reactFormInteractionsDocs.title}
-        duration={reactFormInteractionsDocs.duration}
+        duration={reactFormInteractionsDocs.clientInformation?.date || ""}
         organization={reactFormInteractionsDocs.organization}
         tagline={reactFormInteractionsDocs.tagline}
         overview={reactFormInteractionsDocs.overview}

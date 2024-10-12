@@ -14,7 +14,7 @@ const FileDrive = () => {
     <div className="">
       <ProjectOverview
         title={fileDriveDocs.title}
-        duration={fileDriveDocs.duration}
+        duration={fileDriveDocs.clientInformation?.date || ""}
         organization={fileDriveDocs.organization}
         tagline={fileDriveDocs.tagline}
         overview={fileDriveDocs.overview}

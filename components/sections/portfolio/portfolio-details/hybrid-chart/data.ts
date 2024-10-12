@@ -1,9 +1,22 @@
+import { PortfolioDetail } from "@/constant/interfaces";
 import { uuid } from "@/utils/shortid";
-import { ProjectDetails } from "../carepro/data";
 
-export const hybridChartDocs: ProjectDetails = {
+export const hybridChartDocs: PortfolioDetail = {
   id: uuid(),
   title: "HybridChart — Patient Data Management and Scheduling System",
+  identity: "hybridChart",
+  subtitle: "Healthcare System",
+  description: [
+    "HybridChart is an application designed to help healthcare providers manage patient data, schedules, and treatment plans.",
+    "It aims to improve workflow efficiency by offering tools for real-time collaboration between healthcare staff.",
+  ],
+  clientInformation: {
+    company: "Blackrock IT Solutions",
+  },
+  githubLink: "",
+  liveLink: "",
+  isConfidential: true,
+
   duration: "Date range here",
   organization: "Your organization or independent project",
   tagline: "Enhancing healthcare workflows through real-time collaboration.",

@@ -1,8 +1,22 @@
+import { PortfolioDetail } from "@/constant/interfaces";
 import { uuid } from "@/utils/shortid";
-import { ProjectDetails } from "../carepro/data";
 
-export const ecommarceDocs: ProjectDetails = {
+export const ecommarceDocs: PortfolioDetail = {
   id: uuid(),
+  identity: "ecommarce",
+  subtitle:
+    "an online destination where buyers shop for goods and sellers offer products and services.",
+  clientInformation: {
+    company: "Blackrock IT Solutions",
+    date: "May 14, 2023",
+  },
+  description: [
+    "I have led the development of the eCommerce platform that utilizes JavaScript, React.js, Redux Toolkit and Tailwind CSS. Adapted functionalities of easy product browsing, cart management and secure checkout systems. Utilized the Redux Toolkit for state management to ensure proper data flow and the system stability. Using Tailwind CSS to design an interface with a modern, reactive and responsive look and feel.",
+    "Employed JavaScript for user interactions to ensure that the entire platform is dynamic and user-friendly.",
+  ],
+  githubLink: "https://github.com/eaysin-arafat/ecommarce_client.git",
+  liveLink: "https://ecommarce-client.vercel.app/",
+
   title: "E-Commerce Platform",
   duration: "Mar 2024 - May 2024",
   organization: "Personal Project",

@@ -1,22 +1,26 @@
 "use client";
 
-import { portfolio } from "@/app/data/portfolio";
 import React from "react";
 import SectionHeader from "../../ui/section-header";
 import { Tabs, TabsList, TabsTrigger } from "../../ui/tabs";
+import { portfolioDetails, PortfolioDetails } from "./portfolio-details";
 import PortfolioItem from "./portfolio-item";
 
 const Portfolio = () => {
-  const [activeTab, setActiveTab] = React.useState("all");
+  const [activeTab, setActiveTab] = React.useState<string>("all");
 
-  const filterProjects = (category: string) => {
-    if (category === "all") {
-      return portfolio;
-    }
-    return portfolio.filter((work) => work.category === category);
+  const portfolioData: PortfolioDetails[] = Object.values(
+    portfolioDetails(true)
+  );
+
+  const filterProjects = (category: string): PortfolioDetails[] => {
+    if (category === "all") return portfolioData;
+
+    return portfolioData.filter((work) => work.category === category);
   };
 
   const filteredWorks = filterProjects(activeTab);
+  console.log("filterProjects", filterProjects(activeTab));
 
   return (
     <section id="recent-works" className="section-container">
@@ -42,13 +46,10 @@ const Portfolio = () => {
       </div>
 
       <div className="grid lg:grid-cols-2 gap-5 pt-10">
-        {filteredWorks.map((recentWork) => {
-          return <PortfolioItem portfolio={recentWork} key={recentWork?.id} />;
+        {filteredWorks.map((recentWork: PortfolioDetails) => {
+          return <PortfolioItem portfolio={recentWork} key={recentWork.id} />;
         })}
       </div>
-      {/* <div className="flex items-center justify-center w-full mt-16">
-        <Button>See More</Button>
-      </div> */}
     </section>
   );
 };

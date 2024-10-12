@@ -14,7 +14,7 @@ const TechConnect = () => {
     <div className="">
       <ProjectOverview
         title={techConnectDocs.title}
-        duration={techConnectDocs.duration}
+        duration={techConnectDocs.clientInformation?.date || ""}
         organization={techConnectDocs.organization}
         tagline={techConnectDocs.tagline}
         overview={techConnectDocs.overview}

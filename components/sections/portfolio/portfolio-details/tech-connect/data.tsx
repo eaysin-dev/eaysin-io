@@ -1,9 +1,23 @@
+import { PortfolioDetail } from "@/constant/interfaces";
 import { uuid } from "@/utils/shortid";
-import { ProjectDetails } from "../carepro/data";
 
-export const techConnectDocs: ProjectDetails = {
+export const techConnectDocs: PortfolioDetail = {
   id: uuid(),
   title: "TechConnect — Employee Management Platform",
+  identity: "techConnect",
+  subtitle: "Employee Management System",
+  description: [
+    "TechConnect is an employee management platform that helps organizations track employee performance, generate reports, and manage internal communication efficiently.",
+    "It provides a detailed dashboard for managers to monitor team productivity.",
+  ],
+  clientInformation: {
+    company: "Blackrock IT Solutions",
+    date: "",
+  },
+  githubLink: "",
+  liveLink: "",
+  isConfidential: true,
+
   duration: "March 2022 - Dec 2022",
   organization: "Developed for Intranet Systems Ltd.",
   tagline: "Empowering organizations with real-time employee management tools.",

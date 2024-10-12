@@ -1,4 +1,3 @@
-import { ClientInformation, Portfolio } from "@/app/data/portfolio";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,27 +9,24 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import BaseModal from "@/components/ui/modal";
-import { portfolioDetails } from "./portfolio-details";
+import { ClientInformation } from "@/constant/interfaces";
+import { PortfolioDetails } from "./portfolio-details";
 
-const PortfolioItem = ({ portfolio }: { portfolio: Portfolio }) => {
-  const isValidPortfolioKey = (
-    key: string
-  ): key is keyof ReturnType<typeof portfolioDetails> => {
-    return key in portfolioDetails();
-  };
+const PortfolioItem = ({ portfolio }: { portfolio: PortfolioDetails }) => {
+  const { data, component } = portfolio;
 
   return (
     <Card className="border border-muted p-1 rounded-md" key={portfolio?.id}>
       <CardHeader>
-        <CardTitle className="mb-2">{portfolio?.title}</CardTitle>
-        <CardDescription>{portfolio?.description[0]}</CardDescription>
+        <CardTitle className="mb-2">{data?.title}</CardTitle>
+        <CardDescription>{data?.description[0]}</CardDescription>
       </CardHeader>
 
       <CardContent>
         {/* Technologies Section */}
         <div className="flex flex-wrap gap-2">
-          {portfolio.technologies.length > 0 ? (
-            portfolio.technologies.map((technology) => (
+          {data.techStack.length > 0 ? (
+            data.techStack.map((technology) => (
               <Badge key={technology}>{technology}</Badge>
             ))
           ) : (
@@ -44,13 +40,12 @@ const PortfolioItem = ({ portfolio }: { portfolio: Portfolio }) => {
             Client Information
           </h4>
           <div className="grid grid-cols-2 gap-2 mt-2">
-            {Object.keys(portfolio?.clientInformation || {}).map((key) => (
+            {Object.keys(data?.clientInformation || {}).map((key) => (
               <div key={key}>
                 <p className="text-xs text-muted-foreground">{key}:</p>
                 <p className="text-sm capitalize">
-                  {portfolio?.clientInformation[
-                    key as keyof ClientInformation
-                  ] || ""}
+                  {data?.clientInformation[key as keyof ClientInformation] ||
+                    ""}
                 </p>
               </div>
             ))}
@@ -59,15 +54,14 @@ const PortfolioItem = ({ portfolio }: { portfolio: Portfolio }) => {
       </CardContent>
 
       <CardFooter className="flex flex-col justify-end items-start gap-3">
-        {portfolio?.isConfidential && (
+        {data?.isConfidential && (
           <p className="text-sm text-muted-foreground">
-            This is a private project for{" "}
-            {portfolio?.clientInformation?.company}.
+            This is a private project for {data?.clientInformation?.company}.
           </p>
         )}
 
         <div className="flex justify-between w-full">
-          {!portfolio?.isConfidential && (
+          {!data?.isConfidential && (
             <Button asChild variant="outline">
               <a
                 href="https://your-portfolio.com/project-details"
@@ -78,10 +72,9 @@ const PortfolioItem = ({ portfolio }: { portfolio: Portfolio }) => {
               </a>
             </Button>
           )}
-          <BaseModal title={portfolio?.title} buttonText="Details" size="large">
-            {isValidPortfolioKey(portfolio?.identity)
-              ? portfolioDetails()[portfolio?.identity]
-              : null}
+
+          <BaseModal title={data?.title} buttonText="Details" size="large">
+            {data?.identity ? component : null}
           </BaseModal>
         </div>
       </CardFooter>

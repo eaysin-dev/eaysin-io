@@ -1,39 +1,23 @@
+import { PortfolioDetail } from "@/constant/interfaces";
 import { uuid } from "@/utils/shortid";
-import { Api } from "../../../../ui/project-details/apis";
-import { ChallengeType } from "../../../../ui/project-details/challenges";
-import { InstallationStep } from "../../../../ui/project-details/installation";
-import { KeyFeature } from "../../../../ui/project-details/key-features";
-import { ProjectResourcesType } from "../../../../ui/project-details/resources";
-import { Responsibility } from "../../../../ui/project-details/role";
-import { Screenshot } from "../../../../ui/project-details/screenshots";
-import { UsageType } from "../../../../ui/project-details/usage";
-import { ValidationRule } from "../../../../ui/project-details/validations-feature";
 
-export interface ProjectDetails {
-  id: string;
-  title: string;
-  duration: string;
-  organization: string;
-  tagline: string;
-  overview: string;
-  keyFeatures: KeyFeature[];
-  usage?: UsageType[];
-  techStack: string[];
-  challenges: ChallengeType[];
-  api?: Api[];
-  images?: Screenshot[];
-  role?: string;
-  responsibilities: Responsibility[];
-  installationStep?: InstallationStep[];
-  lessons?: string;
-  improvements?: string;
-  blogCaseStudies?: ProjectResourcesType;
-  externalResource?: ProjectResourcesType;
-  validationRules?: ValidationRule;
-}
-
-export const careproDocs: ProjectDetails = {
+export const careproDocs: PortfolioDetail = {
   id: uuid(),
+  identity: "carepro",
+  subtitle:
+    "Carepro is a government-sponsored healthcare system designed to streamline patient management, treatment tracking, and doctor-patient interactions.",
+  description: [
+    "Contributed to the development of a government-sponsored healthcare ecosystem project within a collaborative team environment. Played a key role in designing and implementing features to manage medical treatments, patient records, and doctor interactions. Facilitated the integration of diverse medical facilities under different departments.",
+    "Collaborated effectively with team members and stakeholders to meet project objectives and comply with government regulations.",
+  ],
+  clientInformation: {
+    company: "Excel Technologies Ltd.",
+    date: "Jan 2023 - Sep 2023",
+  },
+  githubLink: "",
+  liveLink: "",
+  isConfidential: true,
+
   title: "Carepro — Health Care Ecosystem",
   duration: "Jan 2023 - Sep 2023",
   organization: "Associated with Excel Technologies Ltd",

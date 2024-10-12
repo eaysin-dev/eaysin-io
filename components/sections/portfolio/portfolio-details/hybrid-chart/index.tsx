@@ -14,7 +14,7 @@ const HybridChart = () => {
     <div className="">
       <ProjectOverview
         title={hybridChartDocs.title}
-        duration={hybridChartDocs.duration}
+        duration={hybridChartDocs.clientInformation?.date || ""}
         organization={hybridChartDocs.organization}
         tagline={hybridChartDocs.tagline}
         overview={hybridChartDocs.overview}

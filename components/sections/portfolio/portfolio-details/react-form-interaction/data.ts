@@ -1,9 +1,22 @@
+import { PortfolioDetail } from "@/constant/interfaces";
 import { uuid } from "@/utils/shortid";
-import { ProjectDetails } from "../carepro/data";
 
-export const reactFormInteractionsDocs: ProjectDetails = {
+export const reactFormInteractionsDocs: PortfolioDetail = {
   id: uuid(),
   title: "React Form Interactions — Advanced Form Management",
+  identity: "reactFormInteractions",
+  subtitle: "A React Form State and Validation Library",
+  description: [
+    "Developed a reusable React library (react-form-interactions) to simplify form state management and validation in React applications. Define comprehensive validation rules for form fields including required fields, minimum/maximum lengths, patterns, and more.",
+    "Easily extend with custom validation rules and behaviors tailored to specific application requirements. Designed for seamless integration with React applications using hooks and functional components.",
+    "Automatically manage and display error messages associated with form fields based on validation rules.",
+  ],
+  githubLink: "https://github.com/eaysin-arafat/react-form-interactions",
+  liveLink:
+    "https://www.npmjs.com/package/react-form-interactions?activeTab=readme",
+  clientInformation: {
+    date: "July 07, 2024 (Last Version)",
+  },
   duration: "Date range here",
   organization: "Your organization or independent project",
   tagline: "Streamlining form state management and validation.",

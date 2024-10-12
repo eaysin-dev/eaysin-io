@@ -1,9 +1,21 @@
+import { PortfolioDetail } from "@/constant/interfaces";
 import { uuid } from "@/utils/shortid";
-import { ProjectDetails } from "../carepro/data";
 
-export const fileDriveDocs: ProjectDetails = {
+export const fileDriveDocs: PortfolioDetail = {
   id: uuid(),
   title: "FileDrive — File Management Platform",
+
+  identity: "fileDrive",
+  subtitle: "A comprehensive file management platform",
+  description: [
+    "FileDrive is a comprehensive file management platform designed to streamline the process of storing, sharing, and managing files among individuals and organizations. With FileDrive, users can securely upload files of various types, including PDFs, images, PNGs, SVGs, and more. Users can create organizations to manage files within specific groups or teams and grant role-based access to files.",
+    "The platform offers advanced features such as category-based file organization and authentication powered by Clerk. FileDrive also integrates with Convex, a third-party service, for backend operations.",
+  ],
+
+  githubLink: "https://github.com/eaysin-arafat/file-drive.git",
+  liveLink: "",
+  clientInformation: { date: "08 April 2024" },
+
   duration: "Feb 2023 - Aug 2023",
   organization: "Personal Project",
   tagline:

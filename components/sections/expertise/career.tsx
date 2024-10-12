@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -70,17 +69,21 @@ const Career = () => {
         {careers?.map((career) => (
           <Card
             key={career.id}
-            className="hover:shadow-lg transition-shadow rounded-md"
+            className="hover:shadow-lg transition-shadow rounded-md border border-gray-200"
           >
-            <CardHeader>
-              <CardTitle className="text-xl font-semibold">
-                {career.role}
-              </CardTitle>
-              <CardDescription>
-                <span className="text-sm text-muted-foreground">
-                  {career.date}
-                </span>
-              </CardDescription>
+            <CardHeader className="flex justify-between items-start">
+              <div>
+                <CardTitle className="text-xl font-semibold">
+                  {career.role}
+                </CardTitle>
+                <Typography
+                  variant="p"
+                  className="text-sm text-muted-foreground"
+                >
+                  {career.company}
+                </Typography>
+              </div>
+              <div className="text-sm text-muted-foreground">{career.date}</div>
             </CardHeader>
 
             <CardContent>
