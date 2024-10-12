@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="h-full relative px-5 md:px-6 lg:px-7 xl:px-36 pt-[16vh] sm:pt-[22vh] md:pt-[25vh] lg:pt-[24vh] xl:pt-[28vh] 2xl:pt-[32vh]">
         <Typography
           variant="display1"
-          className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight md:leading-snug "
+          className="text-2xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight md:leading-snug "
         >
           I’m <span className="text-baseColor">Eaysin Arafat</span>, a frontend
           developer dedicated to solving problems in both coding and everyday
