@@ -29,7 +29,7 @@ const ProjectChallenges = ({ challenges }: ProjectChallengesProps) => {
       <Accordion type="multiple" className="ml-2.5">
         {challenges.map((challenge, index) => (
           <AccordionItem key={index} value={`item-${index}`}>
-            <AccordionTrigger className="pb-1.5">
+            <AccordionTrigger className="pb-1.5 text-start">
               {challenge?.label}
             </AccordionTrigger>
             <AccordionContent>

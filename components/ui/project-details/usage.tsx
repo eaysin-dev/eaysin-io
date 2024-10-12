@@ -28,10 +28,13 @@ const ProjectUsage = ({ usages }: ProjectUsagesProps) => {
           </p>
 
           {usage?.codeSnippet && (
-            <pre className="px-4 rounded-md overflow-x-auto my-1">
-              <code className="text-sm">{usage.codeSnippet}</code>
-            </pre>
+            <div className="relative max-w-full overflow-x-auto">
+              <pre className="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-md my-1 whitespace-pre-wrap">
+                <code className="text-sm">{usage.codeSnippet}</code>
+              </pre>
+            </div>
           )}
+
           {usage?.image && (
             <div className="flex items-center justify-center w-full">
               <Image

@@ -31,7 +31,7 @@ const ContactDialog = () => {
           <Button className="py-6 w-full">Let&apos;s Talk</Button>
         </div>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[550px]">
+      <DialogContent className="max-w-[calc(100%-2rem)] sm:max-w-[550px]">
         <DialogHeader>
           <DialogTitle className="text-2xl">Contact Me</DialogTitle>
           <DialogDescription className="mt-1">
