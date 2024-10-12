@@ -69,7 +69,7 @@ const Career = () => {
         {careers?.map((career) => (
           <Card
             key={career.id}
-            className="hover:shadow-lg transition-shadow rounded-md border border-gray-200"
+            className="hover:shadow-lg transition-shadow rounded-md"
           >
             <CardHeader className="flex justify-between items-start">
               <div>
