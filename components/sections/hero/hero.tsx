@@ -9,7 +9,7 @@ const Hero = () => {
       id="hero"
       className="s-hero h-screen relative w-full overflow-hidden z-10"
     >
-      <div className="h-full relative px-5 md:px-6 lg:px-7 xl:px-36 pt-[18.5vh] sm:pt-[22vh] md:pt-[25vh] lg:pt-[24vh] xl:pt-[28vh] 2xl:pt-[32vh] bg-gradient-to-r from-[hsl(var(--muted))] via-[hsl(var(--background))] to-[hsl(var(--muted))]">
+      <div className="h-full relative px-5 md:px-6 lg:px-7 xl:px-36 pt-[16vh] sm:pt-[22vh] md:pt-[25vh] lg:pt-[24vh] xl:pt-[28vh] 2xl:pt-[32vh]">
         <Typography
           variant="display1"
           className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight md:leading-snug "
@@ -17,7 +17,6 @@ const Hero = () => {
           I’m <span className="text-baseColor">Eaysin Arafat</span>, a frontend
           developer dedicated to solving problems in both coding and everyday
           life.
-          <span className="absolute top-[-1.2rem] left-0 h-[2px] w-[4.5rem] bg-baseColor"></span>
         </Typography>
 
         <p className="mt-4 text-sm md:text-base lg:text-lg font-medium text-muted-foreground italic">
