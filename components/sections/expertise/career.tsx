@@ -61,11 +61,9 @@ export const careers = [
 const Career = () => {
   return (
     <>
-      <div className="row">
-        <Typography variant="h2">Career</Typography>
-      </div>
+      <Typography variant="h2">Career</Typography>
 
-      <div className="row block-900-full grid lg:grid-cols-1 gap-5 pt-7">
+      <div className="block-900-full grid lg:grid-cols-1 gap-5 pt-7">
         {careers?.map((career) => (
           <Card
             key={career.id}

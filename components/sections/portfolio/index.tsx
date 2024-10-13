@@ -20,7 +20,6 @@ const Portfolio = () => {
   };
 
   const filteredWorks = filterProjects(activeTab);
-  console.log("filterProjects", filterProjects(activeTab));
 
   return (
     <section id="recent-works" className="section-container">

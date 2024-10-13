@@ -8,8 +8,6 @@ import useHeader from "./useHeader";
 const Header: React.FC = () => {
   const { handleHomeClick, isOffset, isScrolling, isSticky } = useHeader();
 
-  console.log({ isScrolling, isSticky, isOffset });
-
   return (
     <header
       className={`s-header !bg-background flex items-center justify-center z-50 ${
