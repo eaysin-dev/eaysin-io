@@ -4,9 +4,9 @@ import { Typography } from "@/components/ui/typography";
 const Social = () => {
   return (
     <div className="md:col-span-1">
-      <Typography variant="h4" className="uppercase tracking-wider pb-4">
-        Follow Us
-      </Typography>
+      <h2 className="text-3xl font-bold bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text mb-2 text-start">
+        Follow Me
+      </h2>
 
       <ul className="space-y-2">
         <li>

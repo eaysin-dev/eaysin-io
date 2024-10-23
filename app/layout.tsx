@@ -18,12 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased" id="top">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider defaultTheme="system">
           <TooltipProvider>{children}</TooltipProvider>
           <Toaster />
         </ThemeProvider>

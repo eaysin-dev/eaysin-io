@@ -1,5 +1,5 @@
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
-import { FaExternalLinkAlt } from "react-icons/fa";
 
 export interface Screenshot {
   id: string;
@@ -41,7 +41,7 @@ const ProjectScreenshots = ({
             className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
           >
             Visit Live Project
-            <FaExternalLinkAlt className="ml-2" size={14} />
+            <ExternalLink className="ml-2" size={14} />
           </a>
         </div>
       )}

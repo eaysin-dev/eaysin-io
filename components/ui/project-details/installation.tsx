@@ -26,9 +26,9 @@ const ProjectInstallation = ({
       <div className="space-y-2 mt-2 ml-2.5">
         {installationSteps.map((step, index) => (
           <div key={step?.id}>
-            <p className="text-sm font-medium">
+            <Typography variant="p">
               {index + 1}. {step.title}
-            </p>
+            </Typography>
             <Typography
               variant="p"
               className="pl-1 mt-2.5 text-muted-foreground"

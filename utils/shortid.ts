@@ -1,3 +1,3 @@
 import { generate } from "shortid";
 
-export const uuid = () => generate();
+export const generateUId = () => generate();

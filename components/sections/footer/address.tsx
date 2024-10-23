@@ -1,19 +1,61 @@
 import { Typography } from "@/components/ui/typography";
+import { FiExternalLink, FiLinkedin, FiMail } from "react-icons/fi";
 
-const Address = () => {
+const ContactInfo = () => {
   return (
-    <div className="md:col-span-1">
-      <Typography variant="h4" className="uppercase tracking-wider pb-4">
-        Where to Find Me
-      </Typography>
+    <div className="md:col-span-1 space-y-6">
+      {/* Title */}
+      <h2 className="text-3xl font-bold bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text mb-4">
+        Contact Information
+      </h2>
 
-      <div>
-        <Typography variant="large">Real Crossing, College Road</Typography>
-        <Typography variant="large">Sadar, Mymensingh, BD</Typography>
-        <Typography variant="large">+880 164 3226 078</Typography>
+      {/* Contact Information */}
+      <div className="space-y-4">
+        {/* Email */}
+        <div className="flex items-center gap-2">
+          <FiMail className="text-primary" size={20} />
+          <Typography variant={"h4"} className="text-lg font-medium">
+            <a
+              href="mailto:eaysin.arafat.j@gmail.com"
+              className="hover:underline"
+            >
+              eaysin.arafat.j@gmail.com
+            </a>
+          </Typography>
+        </div>
+
+        {/* LinkedIn */}
+        <div className="flex items-center gap-2">
+          <FiLinkedin className="text-primary" size={20} />
+          <Typography variant={"h4"} className="text-lg font-medium">
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              LinkedIn
+            </a>
+          </Typography>
+        </div>
+
+        {/* Blog and Case Study */}
+        <div className="flex items-center gap-2">
+          <FiExternalLink className="text-primary" size={20} />
+          <Typography variant={"h4"} className="text-lg font-medium">
+            <a
+              href="https://yourblog.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              Case Studies & Blogs
+            </a>
+          </Typography>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Address;
+export default ContactInfo;

@@ -1,18 +1,29 @@
-import Services from "@/components/sections/expertise";
-import Footer from "@/components/sections/footer";
-import Header from "@/components/sections/header";
-import Hero from "@/components/sections/hero/hero";
-import Portfolio from "@/components/sections/portfolio";
+import { Careers } from "@/components/sections/Careers";
+import { Footer } from "@/components/sections/footer";
+import { Hero } from "@/components/sections/Hero";
+import { Navbar } from "@/components/sections/Navbar";
+import { Portfolio } from "@/components/sections/projects";
+import { ScrollToTop } from "@/components/sections/ScrollToTop";
+import { Skills } from "@/components/sections/Skills";
 
 export default function Home() {
   return (
-    <main className="bg-gradient-to-r from-[hsl(var(--muted))] via-[hsl(var(--background))] to-[hsl(var(--muted))]">
-      {/* <Preloader /> */}
-      <Header />
+    <>
+      <Navbar />
       <Hero />
-      <Services />
+      <Skills />
+      {/* <About /> */}
+      <Careers />
       <Portfolio />
+      {/* <Services /> */}
+      {/* <Cta /> */}
+      {/* <Testimonials /> */}
+      {/* <Team />
+      <Pricing />
+      <Newsletter /> */}
+      {/* <FAQ /> */}
       <Footer />
-    </main>
+      <ScrollToTop />
+    </>
   );
 }

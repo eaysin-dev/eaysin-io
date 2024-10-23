@@ -33,7 +33,7 @@ const EmailDisplay = () => {
           >
             <Typography
               variant="inlineCode"
-              className="text-[2rem] lg:text-[4rem] whitespace-pre-wrap text-center py-3 px-5"
+              className="text-[2rem] md:text-[4rem] lg:text-[4rem] whitespace-pre-wrap text-center py-3 px-5"
             >
               eaysin.arafat.j@gmail.com
             </Typography>

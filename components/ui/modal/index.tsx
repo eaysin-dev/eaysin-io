@@ -29,7 +29,7 @@ const PortfolioDialog = ({
       </DialogTrigger>
 
       <DialogContent
-        className={`h-[75vh] overflow-y-scroll ${sizeClasses[size]}`}
+        className={`h-[80vh] overflow-y-scroll ${sizeClasses[size]}`}
       >
         <div>
           {title && (

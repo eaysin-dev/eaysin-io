@@ -6,6 +6,8 @@ export type Accounts = {
   leetCode: string;
   facebook: string;
   stackOverflow: string;
+  resume: string;
+  hashnode: string;
 };
 
 export const accounts: Accounts = {
@@ -16,4 +18,7 @@ export const accounts: Accounts = {
   leetCode: "https://leetcode.com/eaysin-arafat/",
   facebook: "https://www.facebook.com/eaysin.arafat.j/",
   stackOverflow: "https://stackoverflow.com/users/21184328/eaysin-arafat",
+  resume:
+    "https://docs.google.com/document/d/1DPLPuUrLCye0FXjnJ7Xp2mKNY5AAYalAq-IaOkRuI7k/edit?usp=sharing",
+  hashnode: "https://eaysin-arafat.hashnode.dev/",
 };

@@ -16,7 +16,7 @@ const ProjectResources = ({ links, title }: ProjectResourcesType) => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
+              className="text-primary hover:underline"
             >
               {link.label}
             </a>

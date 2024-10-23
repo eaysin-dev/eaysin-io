@@ -1,6 +1,6 @@
 // ProjectRole.tsx
 
-import { Typography } from "@/components/ui/typography";
+import { Typography } from "../typography";
 
 export interface Responsibility {
   id: string;

@@ -1,61 +1,30 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import GoTop from "../../ui/go-top/goTop";
-import { Typography } from "../../ui/typography";
+import { Typography } from "@/components/ui/typography";
 import Address from "./address";
 import ContactDialog from "./contact-dialog";
-import EmailDisplay from "./email-display";
 import Social from "./social";
 
-const Footer = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  // Back to top scroll functionality
-  const toggleVisibility = () => {
-    if (window.scrollY >= 800) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", toggleVisibility);
-    };
-  }, []);
-
+export const Footer = () => {
   return (
     <>
-      <section className="section-container pb-10 pt-24" id="contact">
+      <section id="contact" className="container pb-10 pt-24">
         <div className="mb-16">
-          <Typography
-            variant="h3"
-            className="uppercase tracking-wider text-center"
-          >
-            Get In Touch
-          </Typography>
+          <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
+            Let&apos;s
+            <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+              Connect
+            </span>
+          </h2>
           <Typography variant="h1" className="mt-16">
-            Have an idea or an epic project in mind? Talk to us. Let us work
-            together and make something great. Shoot us a message at
+            Looking to collaborate on an exciting project or need a dedicated
+            developer for your team? Let’s work together to bring your vision to
+            life. Get in touch at:
           </Typography>
         </div>
-
-        <EmailDisplay />
       </section>
 
-      <footer className="py-10 md:py-30 section-container">
+      {/* <EmailDisplay /> */}
+
+      <footer className="py-10 md:py-30 container">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <Address />
 
@@ -63,11 +32,7 @@ const Footer = () => {
 
           <ContactDialog />
         </div>
-
-        <GoTop isVisible={isVisible} scrollToTop={scrollToTop} />
       </footer>
     </>
   );
 };
-
-export default Footer;
