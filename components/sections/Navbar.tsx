@@ -53,8 +53,9 @@ export const Navbar = () => {
           <NavigationMenuItem className="font-bold flex">
             <a
               rel="noreferrer noopener"
-              href="/"
-              className="ml-2 font-bold text-xl flex gap-1.5"
+              href="#"
+              onClick={() => setIsOpen(false)}
+              className="ml-2 font-bold text-xl flex items-center justify-center gap-2"
             >
               <Icon />
               Eaysin Arafat
@@ -77,9 +78,16 @@ export const Navbar = () => {
 
               <SheetContent side={"left"}>
                 <SheetHeader>
-                  <SheetTitle className="font-bold text-xl flex items-center justify-center w-full gap-1.5">
-                    <Icon />
-                    Eaysin Arafat
+                  <SheetTitle className="font-bold text-xl">
+                    <a
+                      href={"#"}
+                      rel="noreferrer noopener"
+                      onClick={() => setIsOpen(false)}
+                      className="flex items-center justify-center w-full gap-2"
+                    >
+                      <Icon />
+                      Eaysin Arafat
+                    </a>
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
