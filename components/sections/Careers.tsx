@@ -83,7 +83,7 @@ export const Careers = () => {
               <p className="text-sm leading-7 mb-4">{career.description}</p>
 
               {/* Location and Type Section */}
-              <div className="flex gap-4 mb-4">
+              <div className="flex flex-col md:flex-row gap-2 mb-4">
                 {/* Location Badge */}
                 <div className="flex items-center gap-2">
                   <MapPinIcon className="h-4 w-4 text-muted-foreground" />

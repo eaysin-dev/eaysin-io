@@ -55,7 +55,7 @@ export const Skills = () => {
         ))}
       </div>
 
-      <p className="mt-12 text-center text-sm lg:text-base font-semibold p-4 rounded-lg shadow-md bg-card text-card-foreground">
+      <p className="mt-12 text-center text-sm lg:text-base font-medium p-4 rounded-lg shadow-md bg-card text-card-foreground">
         I have a strong understanding of core languages like JavaScript and
         TypeScript, allowing me to pick up and excel with any framework or
         library in a short time. My approach focuses on depth and mastering the

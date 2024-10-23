@@ -1,17 +1,15 @@
-
-import ProjectOverview from "@/components/ui/project-details/overview";
-import { reactFormInteractionsDocs } from "./data";
-import ProjectKeyFeatures from "@/components/ui/project-details/key-features";
-import ProjectInstallation from "@/components/ui/project-details/installation";
-import ProjectUsage from "@/components/ui/project-details/usage";
-import ProjectTechStack from "@/components/ui/project-details/tech-stack";
-import ProjectChallenges from "@/components/ui/project-details/challenges";
 import ProjectApis from "@/components/ui/project-details/apis";
-import ProjectRole from "@/components/ui/project-details/role";
-import ProjectLessons from "@/components/ui/project-details/lessons";
+import ProjectChallenges from "@/components/ui/project-details/challenges";
 import ProjectImprovements from "@/components/ui/project-details/improvements";
-import ProjectValidationsFeature from "@/components/ui/project-details/validations-feature";
+import ProjectInstallation from "@/components/ui/project-details/installation";
+import ProjectKeyFeatures from "@/components/ui/project-details/key-features";
+import ProjectLessons from "@/components/ui/project-details/lessons";
+import ProjectOverview from "@/components/ui/project-details/overview";
 import ProjectResources from "@/components/ui/project-details/resources";
+import ProjectRole from "@/components/ui/project-details/role";
+import ProjectTechStack from "@/components/ui/project-details/tech-stack";
+import ProjectValidationsFeature from "@/components/ui/project-details/validations-feature";
+import { reactFormInteractionsDocs } from "./data";
 
 const ReactFormInteractions = () => {
   return (
@@ -27,7 +25,7 @@ const ReactFormInteractions = () => {
       <ProjectInstallation
         installationSteps={reactFormInteractionsDocs.installationStep || []}
       />
-      <ProjectUsage usages={reactFormInteractionsDocs?.usage || []} />
+      {/* <ProjectUsage usages={reactFormInteractionsDocs?.usage || []} /> */}
       <ProjectTechStack techStack={reactFormInteractionsDocs.techStack} />
       <ProjectChallenges challenges={reactFormInteractionsDocs.challenges} />
       <ProjectApis apis={reactFormInteractionsDocs?.api || []} />

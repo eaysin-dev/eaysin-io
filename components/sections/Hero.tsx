@@ -18,14 +18,14 @@ export const Hero = () => {
           </h1>{" "}
         </main>
 
-        <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
+        <p className="text-base md:text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
           I&apos;m dedicated to solving problems both in coding and in everyday
           life. Self-taught and driven, I embrace each technology as a unique
           philosophy, specializing in user-centric web applications with a focus
           on performance and scalability.
         </p>
 
-        <p className="text-lg text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
+        <p className="md:text-lg text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
           I prioritize clean code and real-time, efficient user experiences to
           ensure every project exceeds expectations.
         </p>
