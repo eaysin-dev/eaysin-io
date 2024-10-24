@@ -12,7 +12,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Icon from "@/public/icons/Icon";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
@@ -46,6 +46,27 @@ const routeList: RouteProps[] = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [activeRoute, setActiveRoute] = useState<string>("");
+
+  // Detect current route (hash or pathname)
+  useEffect(() => {
+    const handleHashChange = () => {
+      setActiveRoute(window.location.hash); // or window.location.pathname if using routes without hash
+    };
+
+    // Initial set on mount
+    handleHashChange();
+
+    // Listen for hash change
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
+
+  const isActive = (href: string) => activeRoute === href;
+
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background overflow-hidden">
       <NavigationMenu className="mx-auto">
@@ -97,7 +118,9 @@ export const Navbar = () => {
                       key={label}
                       href={href}
                       onClick={() => setIsOpen(false)}
-                      className={buttonVariants({ variant: "ghost" })}
+                      className={`${buttonVariants({
+                        variant: isActive(href) ? "secondary" : "ghost",
+                      })}`}
                     >
                       {label}
                     </a>
@@ -126,7 +149,7 @@ export const Navbar = () => {
                 href={route.href}
                 key={i}
                 className={`text-[17px] ${buttonVariants({
-                  variant: "ghost",
+                  variant: isActive(route.href) ? "secondary" : "ghost",
                 })}`}
               >
                 {route.label}
