@@ -16,7 +16,7 @@ const careers = [
     role: "React Developer",
     company: "Excel Technologies Ltd.",
     location: "House #13, Road #07 Block #F, Banani Dhaka-1213",
-    type: "Full-Time",
+    type: "On-Site",
     date: "Jan 2023 - Feb 2024",
     description:
       "Worked on government-sponsored healthcare projects, streamlining patient management and treatment tracking. Worked on TUSO, a platform for reporting, managing, and resolving system issues, featuring real-time notifications and integrated troubleshooting.",
@@ -36,7 +36,7 @@ const careers = [
     role: "Frontend Developer",
     company: "Blackrock IT Solutions (Contract)",
     location: "Mesa, Arizona, USA",
-    type: "Contract",
+    type: "Remote",
     date: "Mar 2024 - Aug 2024",
     description:
       "Contributed to developing healthcare and employee management platforms for improved collaboration and real-time updates.",
