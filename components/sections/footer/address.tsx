@@ -1,3 +1,4 @@
+import { accounts } from "@/app/data/accounts";
 import { Typography } from "@/components/ui/typography";
 import { FiExternalLink, FiLinkedin, FiMail } from "react-icons/fi";
 
@@ -29,7 +30,7 @@ const ContactInfo = () => {
           <FiLinkedin className="text-primary" size={20} />
           <Typography variant={"h4"} className="text-lg font-medium">
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href={accounts.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
@@ -44,7 +45,7 @@ const ContactInfo = () => {
           <FiExternalLink className="text-primary" size={20} />
           <Typography variant={"h4"} className="text-lg font-medium">
             <a
-              href="https://yourblog.com"
+              href={accounts.hashnode}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
