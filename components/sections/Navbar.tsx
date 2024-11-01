@@ -127,14 +127,14 @@ export const Navbar = () => {
                   ))}
                   <a
                     rel="noreferrer noopener"
-                    href="https://github.com/leoMirandaa/shadcn-landing-page.git"
+                    href="/resume.pdf"
                     target="_blank"
                     className={`w-[110px] border ${buttonVariants({
                       variant: "secondary",
                     })}`}
                   >
                     <GitHubLogoIcon className="mr-2 w-5 h-5" />
-                    Github
+                    Download CV
                   </a>
                 </nav>
               </SheetContent>
