@@ -11,6 +11,8 @@ import { hybridChartDocs } from "./hybrid-chart/data";
 import HybridChart from "./hybrid-chart/index";
 import ReactFormInteractions from "./react-form-interaction";
 import { reactFormInteractionsDocs } from "./react-form-interaction/data";
+import SyncWorkbench from "./sync-workbench";
+import { syncWorkbenchDocs } from "./sync-workbench/data";
 import TechConnect from "./tech-connect";
 import { techConnectDocs } from "./tech-connect/data";
 import Tuso from "./tuso";
@@ -18,7 +20,7 @@ import { tusoDocs } from "./tuso/data";
 
 export interface PortfolioDetails {
   id: string;
-  category: "reactJs" | "nextJs" | "library";
+  category: "reactJs" | "nextJs" | "library" | "fullStack";
   data: PortfolioDetail;
   component: ReactNode;
 }
@@ -36,6 +38,12 @@ export const portfolioDetails = (
       category: "library",
       data: reactFormInteractionsDocs,
       component: <ReactFormInteractions />,
+    },
+    syncWorkbench: {
+      id: generateUId(),
+      category: "fullStack",
+      data: syncWorkbenchDocs,
+      component: <SyncWorkbench />,
     },
     tuso: {
       id: generateUId(),

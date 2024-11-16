@@ -36,9 +36,10 @@ export const Portfolio = () => {
           onValueChange={setActiveTab}
           className="w-[400px]"
         >
-          <TabsList className="grid w-full grid-cols-4">
+          <TabsList className="grid w-full grid-cols-5">
             <TabsTrigger value="all">All</TabsTrigger>
             <TabsTrigger value="library">Library</TabsTrigger>
+            <TabsTrigger value="fullStack">Full Stack</TabsTrigger>
             <TabsTrigger value="reactJs">React Js</TabsTrigger>
             <TabsTrigger value="nextJs">Next Js</TabsTrigger>
           </TabsList>
