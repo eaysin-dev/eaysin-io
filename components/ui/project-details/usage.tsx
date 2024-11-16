@@ -35,7 +35,7 @@ const ProjectUsage = ({ usages }: ProjectUsagesProps) => {
             </div>
           )}
 
-          {usage?.image && (
+          {usage?.image ? (
             <div className="flex items-center justify-center w-full">
               <Image
                 src={usage.image || ""}
@@ -45,6 +45,8 @@ const ProjectUsage = ({ usages }: ProjectUsagesProps) => {
                 className="my-4 w-full"
               />
             </div>
+          ) : (
+            ""
           )}
         </div>
       ))}

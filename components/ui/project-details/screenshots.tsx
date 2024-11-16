@@ -49,20 +49,22 @@ const ProjectScreenshots = ({
       {/* Render screenshots or fallback message */}
       {hasScreenshots ? (
         <div className="grid md:grid-cols-2 place-items-center gap-4 mt-4 ml-2.5">
-          {screenshots.map((screenshot) => (
-            <div
-              key={screenshot?.id}
-              className="border rounded overflow-hidden h-full"
-            >
-              <Image
-                src={screenshot.src}
-                alt={screenshot.alt}
-                className="w-full h-auto object-cover"
-                width={600}
-                height={300}
-              />
-            </div>
-          ))}
+          {screenshots?.length > 0
+            ? ""
+            : screenshots.map((screenshot) => (
+                <div
+                  key={screenshot?.id}
+                  className="border rounded overflow-hidden h-full"
+                >
+                  <Image
+                    src={screenshot.src}
+                    alt={screenshot.alt}
+                    className="w-full h-auto object-cover"
+                    width={600}
+                    height={300}
+                  />
+                </div>
+              ))}
         </div>
       ) : (
         <p className="mt-4 ml-2.5 text-sm text-muted-foreground">

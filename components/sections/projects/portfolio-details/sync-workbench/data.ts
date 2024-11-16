@@ -67,7 +67,7 @@ export const syncWorkbenchDocs: PortfolioDetail = {
       title: "Role Configuration",
       description:
         "Admins can configure roles and permissions through a user-friendly interface.",
-      image: "/portfolio/sync-workbench/usage/role-config.png",
+      image: "",
       alt: "Role Configuration",
     },
     {
@@ -75,7 +75,7 @@ export const syncWorkbenchDocs: PortfolioDetail = {
       title: "Time Tracking Dashboard",
       description:
         "Monitor employee attendance and manage shift schedules using the time tracking dashboard.",
-      image: "/portfolio/sync-workbench/usage/time-tracking.png",
+      image: "",
       alt: "Time Tracking",
     },
     {
@@ -83,7 +83,7 @@ export const syncWorkbenchDocs: PortfolioDetail = {
       title: "Employee Performance Dashboard",
       description:
         "Evaluate and track employee performance with detailed analytics and reporting tools.",
-      image: "/portfolio/sync-workbench/usage/performance-dashboard.png",
+      image: "",
       alt: "Performance Dashboard",
     },
   ],
