@@ -15,11 +15,11 @@ export const syncWorkbenchDocs: PortfolioDetail = {
     company: "Sync-Tech Solutions",
     date: "July 2024 - Present",
   },
-  githubLink: "https://github.com/yourusername/sync-workbench",
-  liveLink: "https://sync-workbench.com",
+  githubLink: "https://github.com/eaysin-arafat/sync-workbench-client.git",
+  liveLink: "https://sync-workbench-client.vercel.app/",
   isConfidential: false,
   duration: "Ongoing",
-  organization: "Sync-Tech Solutions",
+  organization: "N/A",
   tagline: "Streamlining workforce management with cutting-edge tools.",
   overview:
     "Sync-Workbench centralizes employee and project management, providing a seamless experience across departments and locations. Its customizable features and integrations make it an essential tool for businesses aiming to enhance operational efficiency.",
@@ -99,7 +99,6 @@ export const syncWorkbenchDocs: PortfolioDetail = {
   challenges: [
     {
       label: "Handling Scalability",
-      link: "https://example.com/blog/scalability-challenges",
       solutions: [
         {
           id: generateUId(),
@@ -116,12 +115,12 @@ export const syncWorkbenchDocs: PortfolioDetail = {
     {
       id: generateUId(),
       alt: "Dashboard Overview",
-      src: "/portfolio/sync-workbench/dashboard.png",
+      src: "/portfolio/sync-workbench/01",
     },
     {
       id: generateUId(),
       alt: "Employee Management",
-      src: "/portfolio/sync-workbench/employee-management.png",
+      src: "/portfolio/sync-workbench/03",
     },
   ],
   role: "Full-Stack Developer",

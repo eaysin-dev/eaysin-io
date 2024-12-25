@@ -13,10 +13,9 @@ export const fileDriveDocs: PortfolioDetail = {
   ],
 
   githubLink: "https://github.com/eaysin-arafat/file-drive.git",
-  liveLink: "",
-  clientInformation: { date: "08 April 2024" },
-
-  duration: "Feb 2023 - Aug 2023",
+  liveLink: "https://file-drive-pearl-gamma.vercel.app/",
+  clientInformation: { date: "25 Dec 2024" },
+  duration: "Feb 2023 - Dec 2024",
   organization: "Personal Project",
   tagline:
     "Streamlining file management and sharing for teams and individuals.",
