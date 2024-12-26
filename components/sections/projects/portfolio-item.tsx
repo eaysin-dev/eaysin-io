@@ -65,17 +65,34 @@ const PortfolioItem = ({ portfolio }: { portfolio: PortfolioDetails }) => {
         )}
 
         <div className="flex justify-between w-full">
-          {!data?.isConfidential && (
-            <Button asChild variant="outline">
-              <a
-                href="https://your-portfolio.com/project-details"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Github
-              </a>
-            </Button>
-          )}
+          {/* GitHub Button */}
+          <div className="space-x-2">
+            {!data?.isConfidential && (
+              <Button asChild variant="outline" size={"sm"}>
+                <a
+                  href="https://your-portfolio.com/project-details"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Github
+                </a>
+              </Button>
+            )}
+
+            {/* Live Link Button */}
+            {data?.liveLink && (
+              <Button asChild variant="outline" className="mt-2" size={"sm"}>
+                <a
+                  href={data?.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-500 hover:text-primary-700"
+                >
+                  Live Demo
+                </a>
+              </Button>
+            )}
+          </div>
 
           <BaseModal title={data?.title} buttonText="Details" size="large">
             {data?.identity ? component : null}
