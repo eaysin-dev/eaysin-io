@@ -70,7 +70,7 @@ const PortfolioItem = ({ portfolio }: { portfolio: PortfolioDetails }) => {
             {!data?.isConfidential && (
               <Button asChild variant="outline" size={"sm"}>
                 <a
-                  href="https://your-portfolio.com/project-details"
+                  href={data?.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
