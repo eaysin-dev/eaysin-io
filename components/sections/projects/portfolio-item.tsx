@@ -1,5 +1,4 @@
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -64,33 +63,32 @@ const PortfolioItem = ({ portfolio }: { portfolio: PortfolioDetails }) => {
           </p>
         )}
 
-        <div className="flex justify-between w-full">
+        <div className="flex justify-between items-center w-full">
           {/* GitHub Button */}
-          <div className="space-x-2">
+          <div className="space-x-1">
             {!data?.isConfidential && (
-              <Button asChild variant="outline" size={"sm"}>
-                <a
-                  href={data?.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+              <a
+                href={data?.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Badge variant={"secondary"} className={`py-1`}>
                   Github
-                </a>
-              </Button>
+                </Badge>
+              </a>
             )}
 
             {/* Live Link Button */}
             {data?.liveLink && (
-              <Button asChild variant="outline" className="mt-2" size={"sm"}>
-                <a
-                  href={data?.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary-500 hover:text-primary-700"
-                >
+              <a
+                rel="noreferrer noopener"
+                href={data?.liveLink}
+                target="_blank"
+              >
+                <Badge variant={"secondary"} className={`py-1`}>
                   Live Demo
-                </a>
-              </Button>
+                </Badge>
+              </a>
             )}
           </div>
 

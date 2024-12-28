@@ -1,9 +1,48 @@
 import { accounts } from "@/app/data/accounts";
+import { generateUId } from "@/utils/shortid";
 import { AiFillGithub } from "react-icons/ai";
 import { FaBlog, FaLinkedin } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
-import { buttonVariants } from "../ui/button";
+import { Badge } from "../ui/badge";
 import { HeroCards } from "./HeroCards";
+
+const socialLinks = [
+  {
+    id: generateUId(),
+    href: accounts.github,
+    icon: <AiFillGithub size={17} />,
+    label: "Github",
+    className: "flex items-center gap-1 py-1",
+    variant: "secondary",
+  },
+  {
+    id: generateUId(),
+    href: accounts.linkedin,
+    icon: <FaLinkedin size={16} />,
+    label: "LinkedIn",
+    className: "flex items-center gap-2",
+    variant: "outline",
+    size: "sm",
+  },
+  {
+    id: generateUId(),
+    href: accounts.leetCode,
+    icon: <SiLeetcode size={14} />,
+    label: "LeetCode",
+    className: "flex items-center gap-2",
+    variant: "outline",
+    size: "sm",
+  },
+  {
+    id: generateUId(),
+    href: accounts.hashnode,
+    icon: <FaBlog size={13} />,
+    label: "Blogs",
+    className: "flex items-center gap-2",
+    variant: "outline",
+    size: "sm",
+  },
+];
 
 export const Hero = () => {
   return (
@@ -31,51 +70,22 @@ export const Hero = () => {
         </p>
 
         <div className="flex justify-center lg:justify-start flex-wrap gap-3">
-          <a
-            rel="noreferrer noopener"
-            href={accounts?.github}
-            target="_blank"
-            className={`flex items-center gap-2 ${buttonVariants({
-              variant: "outline",
-            })}`}
-          >
-            <AiFillGithub size={17} />
-            Github
-          </a>
-
-          <a
-            href={accounts?.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`flex items-center gap-2 ${buttonVariants({
-              variant: "outline",
-            })}`}
-          >
-            <FaLinkedin size={16} />
-            LinkedIn
-          </a>
-          <a
-            href={accounts?.leetCode}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`flex items-center gap-2 ${buttonVariants({
-              variant: "outline",
-            })}`}
-          >
-            <SiLeetcode size={14} />
-            LeetCode
-          </a>
-          <a
-            href={accounts?.hashnode}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`flex items-center gap-2 ${buttonVariants({
-              variant: "outline",
-            })}`}
-          >
-            <FaBlog size={13} />
-            Blogs
-          </a>
+          {socialLinks.map((link) => (
+            <a
+              rel="noreferrer noopener"
+              href={accounts?.github}
+              target="_blank"
+              key={link.id}
+            >
+              <Badge
+                variant={"secondary"}
+                className={`flex items-center gap-1 py-1`}
+              >
+                {link.icon}
+                {link.label}
+              </Badge>
+            </a>
+          ))}
         </div>
       </div>
 

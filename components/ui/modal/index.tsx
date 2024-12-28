@@ -25,7 +25,9 @@ const PortfolioDialog = ({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button size={"sm"}>{buttonText}</Button>
+        <Button className="mt-2" size={"sm"}>
+          {buttonText}
+        </Button>
       </DialogTrigger>
 
       <DialogContent

@@ -9,7 +9,7 @@ export const Footer = () => {
       <section id="contact" className="container pb-10 pt-24">
         <div className="mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-            Let&apos;s
+            Let&apos;s &nbsp;
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
               Connect
             </span>
