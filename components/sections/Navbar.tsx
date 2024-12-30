@@ -127,7 +127,7 @@ export const Navbar = () => {
                   ))}
                   <a
                     rel="noreferrer noopener"
-                    href="/resume.pdf"
+                    href="/cv.pdf"
                     target="_blank"
                     className={`w-[110px] border ${buttonVariants({
                       variant: "secondary",
@@ -160,9 +160,11 @@ export const Navbar = () => {
           <div className="hidden md:flex gap-2">
             <a
               rel="noreferrer noopener"
-              href="/resume.pdf"
+              href="/cv.pdf"
               target="_blank"
-              className={`border ${buttonVariants({ variant: "secondary" })}`}
+              className={`border ${buttonVariants({
+                variant: "secondary",
+              })}`}
             >
               Download CV
             </a>
