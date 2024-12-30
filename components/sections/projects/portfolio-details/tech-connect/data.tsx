@@ -12,7 +12,6 @@ export const techConnectDocs: PortfolioDetail = {
   ],
   clientInformation: {
     company: "Blackrock IT Solutions",
-    date: "",
   },
   githubLink: "",
   liveLink: "",
