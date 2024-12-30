@@ -65,10 +65,7 @@ export const Careers = () => {
 
       <div className="block-900-full grid lg:grid-cols-1 gap-5 pt-7">
         {careers?.map((career) => (
-          <Card
-            key={career.id}
-            className="hover:shadow-lg transition-shadow rounded-md"
-          >
+          <Card key={career.id} className="hover:shadow-lg transition-shadow">
             <CardHeader className="flex justify-between items-start">
               <div>
                 <CardTitle className="text-xl font-semibold">

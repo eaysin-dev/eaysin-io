@@ -31,10 +31,7 @@ export const Skills = () => {
       {/* Technologies Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-5">
         {Object.keys(technologies).map((category) => (
-          <Card
-            key={category}
-            className="hover:shadow-lg transition-shadow rounded-md"
-          >
+          <Card key={category} className="hover:shadow-lg transition-shadow">
             <CardHeader>
               <CardTitle className="text-lg font-semibold capitalize">
                 {category}

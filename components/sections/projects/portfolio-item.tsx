@@ -16,10 +16,7 @@ const PortfolioItem = ({ portfolio }: { portfolio: PortfolioDetails }) => {
   const { data, component } = portfolio;
 
   return (
-    <Card
-      className="hover:shadow-lg transition-shadow p-1 rounded-md"
-      key={portfolio?.id}
-    >
+    <Card className="hover:shadow-lg transition-shadow p-1" key={portfolio?.id}>
       <CardHeader>
         <CardTitle className="mb-2">{data?.title}</CardTitle>
         <CardDescription>{data?.description[0]}</CardDescription>
