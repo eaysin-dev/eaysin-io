@@ -4,6 +4,8 @@ export type Accounts = {
   twitter: string;
   emailAddress: string;
   leetCode: string;
+  instagram: string;
+  threads: string;
   facebook: string;
   stackOverflow: string;
   resume: string;
@@ -11,14 +13,16 @@ export type Accounts = {
 };
 
 export const accounts: Accounts = {
-  linkedin: "https://www.linkedin.com/in/eaysin-arafat/",
-  github: "https://github.com/eaysin-arafat",
-  twitter: "https://twitter.com/eaysin_arafat_",
-  emailAddress: "eaysin.arafat.j@gmail.com",
-  leetCode: "https://leetcode.com/eaysin-arafat/",
-  facebook: "https://www.facebook.com/eaysin.arafat.j/",
-  stackOverflow: "https://stackoverflow.com/users/21184328/eaysin-arafat",
+  linkedin: 'https://www.linkedin.com/in/eaysin-dev/',
+  github: 'https://github.com/eaysin-dev',
+  twitter: 'https://x.com/eaysin_dev',
+  emailAddress: 'eaysin.dev@gmail.com',
+  leetCode: 'https://leetcode.com/u/eaysin-dev/',
+  facebook: 'https://www.facebook.com/eaysin.dev/',
+  instagram: 'https://www.instagram.com/eaysin.dev/',
+  threads: 'https://www.threads.net/@eaysin.dev',
+  stackOverflow: 'https://stackoverflow.com/users/21184328/eaysin-arafat',
   resume:
-    "https://docs.google.com/document/d/1DPLPuUrLCye0FXjnJ7Xp2mKNY5AAYalAq-IaOkRuI7k/edit?usp=sharing",
-  hashnode: "https://eaysin-arafat.hashnode.dev/",
+    'https://docs.google.com/document/d/1DPLPuUrLCye0FXjnJ7Xp2mKNY5AAYalAq-IaOkRuI7k/edit?usp=sharing',
+  hashnode: 'https://eaysin-dev.hashnode.dev/',
 };
