@@ -46,21 +46,22 @@ const socialLinks = [
 
 export const Hero = () => {
   return (
-    <section className='container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10 h-screen'>
-      <div className='text-center lg:text-start space-y-6'>
+    <section className='container grid lg:grid-cols-2 mt-[10%] gap-10 h-screen'>
+      <div className='text-center lg:text-start space-y-6 mt-10'>
         <main className='text-4xl md:text-6xl font-bold'>
-          <h1 className='inline'>
-            <span
-              className='inline bg-gradient-to-r from-[#22c55e] to-[#15803d]
- text-transparent bg-clip-text'
-            >
-              Eaysin Arafat
-            </span>{' '}
-            — Frontend Developer
-          </h1>{' '}
+          <div className='space-y-4'>
+            <h1 className='text-4xl md:text-6xl font-bold tracking-tight'>
+              <span className='bg-gradient-to-r from-[#22c55e] to-[#15803d] text-transparent bg-clip-text'>
+                Eaysin Arafat
+              </span>
+            </h1>
+            <p className='text-2xl md:text-3xl font-medium text-muted-foreground'>
+              Frontend Architect & Web Alchemist
+            </p>
+          </div>
         </main>
 
-        <p className='text-base md:text-xl text-muted-foreground text-justify md:w-10/12 mx-auto lg:mx-0'>
+        <p className='text-sm md:text-base text-muted-foreground text-justify md:w-10/12 mx-auto lg:mx-0'>
           I&apos;m a Frontend Developer with 2 years of experience, specializing
           in React, TypeScript, and modern web development. I&apos;m dedicated
           to solving problems through coding, with a strong focus on performance
@@ -68,7 +69,7 @@ export const Hero = () => {
           a unique philosophy, specializing in user-centric web applications.
         </p>
 
-        <p className='md:text-lg text-muted-foreground text-justify md:w-10/12 mx-auto lg:mx-0'>
+        <p className='md:text-base text-muted-foreground text-justify md:w-10/12 mx-auto lg:mx-0'>
           I prioritize clean code and real-time, efficient user experiences to
           ensure that every project meets the highest standards.
         </p>
