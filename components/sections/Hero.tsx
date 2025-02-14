@@ -48,7 +48,7 @@ export const Hero = () => {
   return (
     <section className='container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10 h-screen'>
       <div className='text-center lg:text-start space-y-6'>
-        <main className='text-5xl md:text-6xl font-bold'>
+        <main className='text-4xl md:text-6xl font-bold'>
           <h1 className='inline'>
             <span
               className='inline bg-gradient-to-r from-[#22c55e] to-[#15803d]
@@ -60,19 +60,20 @@ export const Hero = () => {
           </h1>{' '}
         </main>
 
-        <p className='text-base md:text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0'>
-          I&apos;m dedicated to solving problems both in coding and in everyday
-          life. Self-taught and driven, I embrace each technology as a unique
-          philosophy, specializing in user-centric web applications with a focus
-          on performance and scalability.
+        <p className='text-base md:text-xl text-muted-foreground text-justify md:w-10/12 mx-auto lg:mx-0'>
+          I&apos;m a Frontend Developer with 2 years of experience, specializing
+          in React, TypeScript, and modern web development. I&apos;m dedicated
+          to solving problems through coding, with a strong focus on performance
+          and scalability. Self-taught and driven, I embrace each technology as
+          a unique philosophy, specializing in user-centric web applications.
         </p>
 
-        <p className='md:text-lg text-muted-foreground md:w-10/12 mx-auto lg:mx-0'>
+        <p className='md:text-lg text-muted-foreground text-justify md:w-10/12 mx-auto lg:mx-0'>
           I prioritize clean code and real-time, efficient user experiences to
-          ensure every project exceeds expectations.
+          ensure that every project meets the highest standards.
         </p>
 
-        <div className='flex justify-center lg:justify-start flex-wrap gap-3'>
+        <div className='grid grid-cols-2 md:flex justify-center lg:justify-start flex-wrap gap-3'>
           {socialLinks.map((link) => (
             <a
               rel='noreferrer noopener'

@@ -1,7 +1,7 @@
-import { ToastAction } from "@/components/ui/toast";
-import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
-import { toast } from "./use-toast";
+import { ToastAction } from '@/components/ui/toast';
+import emailjs from '@emailjs/browser';
+import { useRef, useState } from 'react';
+import { toast } from './use-toast';
 
 export type ContactErrorType = {
   name?: string;
@@ -38,10 +38,10 @@ const useContact = (onSuccess: () => void) => {
 
     // Simple validation
     const errors: ContactErrorType = {};
-    if (!name) errors.name = "Name is required";
-    if (!email) errors.email = "Email is required";
-    else if (!validateEmail(email)) errors.email = "Invalid email address";
-    if (!message) errors.message = "Message is required";
+    if (!name) errors.name = 'Name is required';
+    if (!email) errors.email = 'Email is required';
+    else if (!validateEmail(email)) errors.email = 'Invalid email address';
+    if (!message) errors.message = 'Message is required';
 
     if (Object.keys(errors).length > 0) {
       setInputError(errors);
@@ -59,10 +59,10 @@ const useContact = (onSuccess: () => void) => {
         (response) => {
           if (response.status === 200) {
             toast({
-              title: "Success!",
+              title: 'Success!',
               description:
                 "Your message has been sent successfully. I'll get back to you soon.",
-              action: <ToastAction altText="Ok">Okay</ToastAction>,
+              action: <ToastAction altText='Ok'>Okay</ToastAction>,
             });
             setInputError(null);
             formRef.current?.reset();
@@ -73,12 +73,12 @@ const useContact = (onSuccess: () => void) => {
         (error) => {
           console.error(error);
           toast({
-            title: "Error",
+            title: 'Error',
             description:
-              "An error occurred while sending your message. Please try again later.",
-            action: <ToastAction altText="Retry">Retry</ToastAction>,
+              'An error occurred while sending your message. Please try again later.',
+            action: <ToastAction altText='Retry'>Retry</ToastAction>,
           });
-        }
+        },
       )
       .finally(() => {
         setIsLoading(false);
