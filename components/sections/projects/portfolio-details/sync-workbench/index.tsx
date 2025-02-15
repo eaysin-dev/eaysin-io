@@ -1,21 +1,23 @@
-import ProjectChallenges from "@/components/ui/project-details/challenges";
-import ProjectImprovements from "@/components/ui/project-details/improvements";
-import ProjectKeyFeatures from "@/components/ui/project-details/key-features";
-import ProjectLessons from "@/components/ui/project-details/lessons";
-import ProjectOverview from "@/components/ui/project-details/overview";
-import ProjectResources from "@/components/ui/project-details/resources";
-import ProjectRole from "@/components/ui/project-details/role";
-import ProjectScreenshots from "@/components/ui/project-details/screenshots";
-import ProjectTechStack from "@/components/ui/project-details/tech-stack";
-import ProjectUsage from "@/components/ui/project-details/usage";
-import { syncWorkbenchDocs } from "./data";
+import {
+  ProjectChallenges,
+  ProjectImprovements,
+  ProjectKeyFeatures,
+  ProjectLessons,
+  ProjectOverview,
+  ProjectResources,
+  ProjectRole,
+  ProjectScreenshots,
+  ProjectTechStack,
+  ProjectUsage,
+} from '@/components/ui/project-details';
+import { syncWorkbenchDocs } from './data';
 
 const SyncWorkbench = () => {
   return (
-    <div className="">
+    <div className=''>
       <ProjectOverview
         title={syncWorkbenchDocs.title}
-        duration={syncWorkbenchDocs.clientInformation?.date || ""}
+        duration={syncWorkbenchDocs.clientInformation?.date || ''}
         organization={syncWorkbenchDocs.organization}
         tagline={syncWorkbenchDocs.tagline}
         overview={syncWorkbenchDocs.overview}
@@ -29,20 +31,20 @@ const SyncWorkbench = () => {
         isCompanyProject
       />
       <ProjectRole
-        role={syncWorkbenchDocs.role || ""}
+        role={syncWorkbenchDocs.role || ''}
         responsibilities={syncWorkbenchDocs.responsibilities}
       />
-      <ProjectLessons lessons={syncWorkbenchDocs.lessons || ""} />
+      <ProjectLessons lessons={syncWorkbenchDocs.lessons || ''} />
       <ProjectImprovements
-        improvements={syncWorkbenchDocs.improvements || ""}
+        improvements={syncWorkbenchDocs.improvements || ''}
       />
       <ProjectResources
-        title="Blog & Case Studies"
+        title='Blog & Case Studies'
         links={syncWorkbenchDocs?.blogCaseStudies?.links || []}
       />
 
       <ProjectResources
-        title="External Resource"
+        title='External Resource'
         links={syncWorkbenchDocs.externalResource?.links || []}
       />
     </div>

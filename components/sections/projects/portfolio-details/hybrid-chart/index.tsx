@@ -1,21 +1,22 @@
-
-import ProjectOverview from "@/components/ui/project-details/overview";
-import { hybridChartDocs } from "./data";
-import ProjectKeyFeatures from "@/components/ui/project-details/key-features";
-import ProjectTechStack from "@/components/ui/project-details/tech-stack";
-import ProjectChallenges from "@/components/ui/project-details/challenges";
-import ProjectScreenshots from "@/components/ui/project-details/screenshots";
-import ProjectRole from "@/components/ui/project-details/role";
-import ProjectLessons from "@/components/ui/project-details/lessons";
-import ProjectImprovements from "@/components/ui/project-details/improvements";
-import ProjectResources from "@/components/ui/project-details/resources";
+import {
+  ProjectChallenges,
+  ProjectImprovements,
+  ProjectKeyFeatures,
+  ProjectLessons,
+  ProjectOverview,
+  ProjectResources,
+  ProjectRole,
+  ProjectScreenshots,
+  ProjectTechStack,
+} from '@/components/ui/project-details';
+import { hybridChartDocs } from './data';
 
 const HybridChart = () => {
   return (
-    <div className="">
+    <div className=''>
       <ProjectOverview
         title={hybridChartDocs.title}
-        duration={hybridChartDocs.clientInformation?.date || ""}
+        duration={hybridChartDocs.clientInformation?.date || ''}
         organization={hybridChartDocs.organization}
         tagline={hybridChartDocs.tagline}
         overview={hybridChartDocs.overview}
@@ -28,18 +29,18 @@ const HybridChart = () => {
         isCompanyProject
       />
       <ProjectRole
-        role={hybridChartDocs.role || ""}
+        role={hybridChartDocs.role || ''}
         responsibilities={hybridChartDocs.responsibilities}
       />
-      <ProjectLessons lessons={hybridChartDocs.lessons || ""} />
-      <ProjectImprovements improvements={hybridChartDocs.improvements || ""} />
+      <ProjectLessons lessons={hybridChartDocs.lessons || ''} />
+      <ProjectImprovements improvements={hybridChartDocs.improvements || ''} />
       <ProjectResources
-        title="Blog & Case Studies"
+        title='Blog & Case Studies'
         links={hybridChartDocs?.blogCaseStudies?.links || []}
       />
 
       <ProjectResources
-        title="External Resource"
+        title='External Resource'
         links={hybridChartDocs.externalResource?.links || []}
       />
     </div>

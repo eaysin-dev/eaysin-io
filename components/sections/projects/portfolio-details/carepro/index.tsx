@@ -1,21 +1,22 @@
-import ProjectOverview from "@/components/ui/project-details/overview";
-import { careproDocs } from "./data";
-import ProjectKeyFeatures from "@/components/ui/project-details/key-features";
-import ProjectTechStack from "@/components/ui/project-details/tech-stack";
-import ProjectScreenshots from "@/components/ui/project-details/screenshots";
-import ProjectChallenges from "@/components/ui/project-details/challenges";
-import ProjectRole from "@/components/ui/project-details/role";
-import ProjectLessons from "@/components/ui/project-details/lessons";
-import ProjectImprovements from "@/components/ui/project-details/improvements";
-import ProjectResources from "@/components/ui/project-details/resources";
-
+import {
+  ProjectChallenges,
+  ProjectImprovements,
+  ProjectKeyFeatures,
+  ProjectLessons,
+  ProjectOverview,
+  ProjectResources,
+  ProjectRole,
+  ProjectScreenshots,
+  ProjectTechStack,
+} from '@/components/ui/project-details';
+import { careproDocs } from './data';
 
 const Carepro = () => {
   return (
-    <div className="">
+    <div className=''>
       <ProjectOverview
         title={careproDocs.title}
-        duration={careproDocs.clientInformation?.date || ""}
+        duration={careproDocs.clientInformation?.date || ''}
         organization={careproDocs.organization}
         tagline={careproDocs.tagline}
         overview={careproDocs.overview}
@@ -28,18 +29,18 @@ const Carepro = () => {
         isCompanyProject
       />
       <ProjectRole
-        role={careproDocs.role || ""}
+        role={careproDocs.role || ''}
         responsibilities={careproDocs.responsibilities}
       />
-      <ProjectLessons lessons={careproDocs.lessons || ""} />
-      <ProjectImprovements improvements={careproDocs.improvements || ""} />
+      <ProjectLessons lessons={careproDocs.lessons || ''} />
+      <ProjectImprovements improvements={careproDocs.improvements || ''} />
       <ProjectResources
-        title="Blog & Case Studies"
+        title='Blog & Case Studies'
         links={careproDocs?.blogCaseStudies?.links || []}
       />
 
       <ProjectResources
-        title="External Resource"
+        title='External Resource'
         links={careproDocs.externalResource?.links || []}
       />
     </div>

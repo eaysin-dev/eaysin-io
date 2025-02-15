@@ -1,21 +1,23 @@
-import ProjectChallenges from "@/components/ui/project-details/challenges";
-import ProjectImprovements from "@/components/ui/project-details/improvements";
-import ProjectKeyFeatures from "@/components/ui/project-details/key-features";
-import ProjectLessons from "@/components/ui/project-details/lessons";
-import ProjectOverview from "@/components/ui/project-details/overview";
-import ProjectResources from "@/components/ui/project-details/resources";
-import ProjectRole from "@/components/ui/project-details/role";
-import ProjectScreenshots from "@/components/ui/project-details/screenshots";
-import ProjectTechStack from "@/components/ui/project-details/tech-stack";
-import ProjectUsage from "@/components/ui/project-details/usage";
-import { tusoDocs } from "./data";
+import {
+  ProjectChallenges,
+  ProjectImprovements,
+  ProjectKeyFeatures,
+  ProjectLessons,
+  ProjectOverview,
+  ProjectResources,
+  ProjectRole,
+  ProjectScreenshots,
+  ProjectTechStack,
+  ProjectUsage,
+} from '@/components/ui/project-details';
+import { tusoDocs } from './data';
 
 const Tuso = () => {
   return (
-    <div className="">
+    <div className=''>
       <ProjectOverview
         title={tusoDocs.title}
-        duration={tusoDocs.clientInformation?.date || ""}
+        duration={tusoDocs.clientInformation?.date || ''}
         organization={tusoDocs.organization}
         tagline={tusoDocs.tagline}
         overview={tusoDocs.overview}
@@ -29,18 +31,18 @@ const Tuso = () => {
         isCompanyProject
       />
       <ProjectRole
-        role={tusoDocs.role || ""}
+        role={tusoDocs.role || ''}
         responsibilities={tusoDocs.responsibilities}
       />
-      <ProjectLessons lessons={tusoDocs.lessons || ""} />
-      <ProjectImprovements improvements={tusoDocs.improvements || ""} />
+      <ProjectLessons lessons={tusoDocs.lessons || ''} />
+      <ProjectImprovements improvements={tusoDocs.improvements || ''} />
       <ProjectResources
-        title="Blog & Case Studies"
+        title='Blog & Case Studies'
         links={tusoDocs?.blogCaseStudies?.links || []}
       />
 
       <ProjectResources
-        title="External Resource"
+        title='External Resource'
         links={tusoDocs.externalResource?.links || []}
       />
     </div>
